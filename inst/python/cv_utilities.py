@@ -26,7 +26,6 @@ class Utilities:
                 return x_scale
 
     def optimize_image(self, filename, resize_width, rotate_angle, blur, x_scale):
-        print(filename)
         image = cv2.imread(filename)
         scale_percent = 40  # percent of original size
         width = int(image.shape[1] * scale_percent / 100)
@@ -34,12 +33,14 @@ class Utilities:
         dim = (width, height)
         # resize image
         image = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
-        #image = imutils.resize(image, width = resize_width)
         image = imutils.rotate(image, angle=rotate_angle)
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        gray = cv2.GaussianBlur(gray, blur, 0)
-        ret, thresh = cv2.threshold(gray, 45, 255, cv2.THRESH_BINARY)
-        thresh = cv2.erode(thresh, None, iterations=2)
+        shifted = cv2.pyrMeanShiftFiltering(image, 21, 51)
+        gray = cv2.cvtColor(shifted, cv2.COLOR_BGR2GRAY)
+        gray = cv2.GaussianBlur(gray, (5,5), 0)
+        ret, thresh = cv2.threshold(gray, 45, 245, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11,11))
+        morphed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
+        thresh = cv2.erode(morphed, None, iterations=2)
         thresh = cv2.dilate(thresh, None, iterations=2)
         im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
