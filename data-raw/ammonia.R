@@ -20,7 +20,7 @@ am$prot <- am$prot/100
 
 ammonia <- rename(am, c(species = "species",
                         ind = "ind",
-                        altura  = "h1",
+                        altura  = "h",
                         d1 = "d_one",
                         d2 = "d_two",
                         ar = "area",

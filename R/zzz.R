@@ -1,6 +1,6 @@
 # global reference (will be initialized in .onLoad)
 
-
+os <- NULL
 cv2 <- NULL
 imutils <- NULL
 utilities <- NULL
@@ -11,6 +11,7 @@ measure_dim <- NULL
 
   python_path <- system.file("python", package = "forImage")
 
+  os <<- reticulate::import("os", delay_load = TRUE)
   cv2 <<- reticulate::import("cv2", delay_load = TRUE)
   imutils <<- reticulate::import("imutils", delay_load = TRUE)
   utilities <<- reticulate::import_from_path("cv_utilities", path = python_path)

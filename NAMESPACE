@@ -2,7 +2,7 @@
 
 export(bio.volume)
 export(biomass)
+export(depth.xml)
 export(measure)
 export(volume.total)
-export(z.xml)
 importFrom(magrittr,"%>%")

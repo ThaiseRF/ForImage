@@ -35,7 +35,7 @@ bio.volume <- function(data, pop = 0.76, genus = NULL, ...){
 
     if (any(genus == d_pop)) {
 
-      pop <- (d_pop[match(genus, d_pop$genera), ]$mean)/100
+      pop <- (d_pop[match(genus, d_pop$genera), ]$mean)
 
     } else {
       stop("Genus not available in database. Set genus = NULL")
@@ -55,7 +55,7 @@ bio.volume <- function(data, pop = 0.76, genus = NULL, ...){
 
 
   if (genus == "archaias" | genus == "cribroelphidium" | genus == "elphidium" |
-      genus == "laevipeneroplis" | genus == "triloculina"){
+      genus == "laevipeneroplis" | genus == "triloculina") {
 
     v = volume.total(x, model = "3hl")$vol
 

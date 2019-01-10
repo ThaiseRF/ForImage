@@ -23,15 +23,15 @@ measure <- function(filePath, ...) {
   cv <- measure_dim$ComputerVision()
 
 
-  files <- list.files(pattern = c('*.tif$','*.tiff$', '.png', '.jpg'))
-  xml <- list.files(pattern = c('*.xml$'))
+  files <- list.files(pattern = c('\\.tif$','\\.tiff$', '\\.jpg$'))
+  xml <- list.files(pattern = c('\\.xml$'))
 
   data  <- lapply(files, function(x) {
     image_name = os$path$splitext(x)[[1]]
     i <- paste(image_name, "tif_meta.xml", sep = ".", collapse = "")
     p <- utils$get_pixels(xml_file = i)
     d <- cv$measure_object_dimension(x, xml_file = i, unit ='um')
-    })
+  })
 
   df <- data.table::rbindlist(data)
 
