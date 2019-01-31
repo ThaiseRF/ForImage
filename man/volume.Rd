@@ -7,7 +7,7 @@
 \method{volume}{total}(data, model = NULL, pop = NULL, ...)
 }
 \arguments{
-\item{data}{data frame containing size data. Size data parameters by model see \code{\link{exampleForam}}}
+\item{data}{data frame containing size data. Size data parameters by model see.}
 
 \item{model}{character informing geometric model to calculate volume, the models options are listed below:
 \itemize{
@@ -28,6 +28,10 @@
   \item \code{'ahx'} : area x heigth
 
 }}
+
+\item{pop}{(optional) protoplasm occupancy percentage}
+
+\item{...}{other arguments.}
 }
 \value{
 A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pop} is informed.

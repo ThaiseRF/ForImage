@@ -2,7 +2,8 @@
 #'
 #' @description The function calculates organisms volume based on geometric approximation.
 #'
-#' @param data data frame containing size data. Size data parameters by model see \code{\link{exampleForam}}
+#'
+#' @param data data frame containing size data. Size data parameters by model see.
 #' @param model character informing geometric model to calculate volume, the models options are listed below:
 #' \itemize{
 #'   \item \code{'1hl'} : sphere
@@ -22,7 +23,8 @@
 #'   \item \code{'ahx'} : area x heigth
 #'
 #' }
-#'
+#' @param pop (optional) protoplasm occupancy percentage
+#' @param ... other arguments.
 #' @details These geometric models applied in this function are based in the selection made by Freitas et al. Which were mainly based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}. Some other formulas were adapted \code{('.fs')} to better calculate the test volume of benthic foraminifera.
 #'  For more information, see \href{changelater}{Freitas et al.}
 #'
@@ -57,32 +59,36 @@ volume.total <- function(data, model = NULL, pop = NULL, ...) {
 
   x <- data.frame(data)
 
-  if (missing(model)) {
-    model <- x$model
+  if (!is.character(model) && !("model" %in% colnames(x))) {
+    stop("Geometric model not specified")
 
-    if (!("model" %in% colnames(x))) {
-      stop("Geometric model not specified")
+    if (!any(model == c("1hl", "2sl", "3hl", "4hl",
+                  "6fs", "7fs","8hl", "10hl", "11fs",
+                  "12v", "13hlsl", "14hl", "15hl", "17fs", "axh"))) {
+      stop("Unknown 'model' argument specified")
+
     }
   }
 
+
   x <- x %>%
-    dplyr::rowwise() %>%
+    dplyr::rowwise(.) %>%
     dplyr::mutate(vol = ifelse(model == "1hl", sphere(d_one),
                                ifelse(model == "2sl", half_sphere(d_one),
                                       ifelse(model == "3hl", spheroid(h, d_one),
-                                             ifelse(model == "4hl", cone(h, d_one),
+                                             ifelse(model == "4hl" || model == "5hl", cone(h, d_one),
                                                     ifelse(model == "6fs", paraboloid(h, d_one),
                                                            ifelse(model == "7fs",dome(h, d_one),
                                                                   ifelse(model == "8hl", cylinder(h, d_one),
                                                                          ifelse(model == "10hl", ellipsoid(h, d_one, d_two),
-                                                                                ifelse(model == "11fs" | model == "12v", elliptic_cone(h, d_one, d_two),
+                                                                                ifelse(model == "11fs" || model == "12v", elliptic_cone(h, d_one, d_two),
                                                                                        ifelse(model == "13hlsl",gomphonemoid(h, d_one, d_two),
-                                                                                              ifelse(model == "14hl" | model == "15hl", elliptic_prism(h, d_one, d_two),
+                                                                                              ifelse(model == "14hl" || model == "15hl", elliptic_prism(h, d_one, d_two),
                                                                                                      ifelse(model == "17fs", dypyramid(h, length, width),
                                                                                                             ifelse(model == "axh", axh(area, h),.))))))))))))))
 
 
-  if (!is.null(pop)) {
+  if (!is.null(pop) || "pop" %in% colnames(x)) {
     result <- x %>%
       tibble::as.tibble() %>%
       dplyr::mutate(vol = vol, biovol = vol * pop)

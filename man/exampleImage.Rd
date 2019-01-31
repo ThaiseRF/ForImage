@@ -8,6 +8,5 @@
 \description{
 This dataset contains image files of several foraminiferal genera.
 These files are originally from previous work - Freitas et al. (2019)
-\href{}{Freitas etal. 2019}
 }
 \keyword{dataset}

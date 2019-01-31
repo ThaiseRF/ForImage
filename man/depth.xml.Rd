@@ -4,7 +4,7 @@
 \alias{depth.xml}
 \title{Import image object depth (Z)}
 \usage{
-depth.xml(filePath = NULL)
+depth.xml(xml_file)
 }
 \arguments{
 \item{filePath}{Path to image metadata files, \code{'.xml', '.tif_meta.xml'}}
@@ -13,17 +13,8 @@ depth.xml(filePath = NULL)
 A dataframe with the folowing information:
 \itemize{
   \item {file} : {filename}
-  \item {px_width} : {image width in pixels}
-  \item {px_height} : {image height in pixels}
-  \item {x_scale} : {image x scale factor}
-  \item {y_scale} : {image y scale factor}
   \item {z_depth} : {measured focus range depth (z)}}
 }
 \description{
 The function retrieve the object depth information from image metadata as source.
-}
-\examples{
-# Get z data from path containing image metadata.
-res <- z.xml("filePath")
-res
 }

@@ -18,7 +18,7 @@ an <- read_csv("data-raw/angulogerina.csv", col_types =
 an$prot <- an$prot/100
 
 angulogerina <- rename(an, c(ind = "ind",
-                             altura  = "h_one",
+                             altura  = "h",
                              d1 = "d_one",
                              d2 = "d_two",
                              ar = "area",

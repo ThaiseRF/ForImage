@@ -8,6 +8,8 @@ measure(filePath, ...)
 }
 \arguments{
 \item{filePath}{path containing the photomicrographs along with their metadata.}
+
+\item{...}{other arguments.}
 }
 \value{
 An dataframe consisting of:

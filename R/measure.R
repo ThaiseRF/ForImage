@@ -6,6 +6,7 @@
 #'
 #' @usage measure(filePath, ...)
 #' @param filePath path containing the photomicrographs along with their metadata.
+#' @param ... other arguments.
 #'
 #' @return An dataframe consisting of:
 #'
@@ -30,7 +31,7 @@ measure <- function(filePath, ...) {
     image_name = os$path$splitext(x)[[1]]
     i <- paste(image_name, "tif_meta.xml", sep = ".", collapse = "")
     p <- utils$get_pixels(xml_file = i)
-    d <- cv$measure_object_dimension(x, xml_file = i, unit ='um')
+    d <- cv$measure_object_dimension(x, xml_file = i, unit = 'um')
   })
 
   df <- data.table::rbindlist(data)

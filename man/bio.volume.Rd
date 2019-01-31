@@ -7,22 +7,25 @@
 bio.volume(data, pop = 0.76, genus = NULL, ...)
 }
 \arguments{
-\item{data}{a numeric vector or data frame with size data. Size data parameters by model see \code{\link{exampleForam}}}
+\item{data}{a numeric vector or data frame with size data. Size data parameters by model see.}
 
-\item{pop}{(optional) protoplasm occupancy percentage. Default value set for specific genus in \code{\link{exampleForam}}.}
+\item{pop}{(optional) protoplasm occupancy percentage. Default value set for specific genus in \code{\link{data_pop}}.}
 
-\item{genus}{foraminifera genus to calculate individual biovolume. See all genera in \code{\link{exampleForam}}}
+\item{genus}{foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pop}}}
+
+\item{...}{other arguments.}
 }
 \description{
 This function calculates foraminifera biovolume, through geometric approximation. To compute others organisms cell volume use \code{\link{volume.total}} function
 }
 \details{
-The function calculates the biovolume of different individuals from the available genera. The geometric models are applied automatically based on adaptation performed by \href{changelater}{Freitas et al.}
+The function calculates the biovolume of different individuals from the available genera. The geometric models are applied automatically based on adaptation performed by.
 }
 \examples{
 # Calculate biovolume for different genera
 data(ammonia)
-dat <- bio.volume(ammonia)
+dat <- bio.volume(ammonia, genus= "ammonia")
+dat
 
 }
 \seealso{

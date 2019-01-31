@@ -1,7 +1,7 @@
 #' Foraminifeal genera data for \code{forImage} examples
 #'
-#' This dataset contains size and protoplasm occupancy data of several foraminiferal genera.
-#' These genera are originally from previous work - \href{}{Freitas etal. 2019}
+#' This dataset contains protoplasm occupancy mean and standart deviation data of 72 foraminifera genera.
+#' These genera data are originally from previous work - Freitas et al. 2019
 #' @docType data
 #' @keywords dataset
 #' @format A data frame with 72 rows and 3 variables:
@@ -39,7 +39,7 @@
 #'  \tab"wiesnerella"
 #' }
 #'
-#' @name exampleForam
+#' @name data_pop
 NULL
 
 #' Foraminifeal photomicrographs for \code{forImage} examples
@@ -47,7 +47,6 @@ NULL
 #'
 #' This dataset contains image files of several foraminiferal genera.
 #' These files are originally from previous work - Freitas et al. (2019)
-#' \href{}{Freitas etal. 2019}
 #'
 #' @docType data
 #' @keywords dataset

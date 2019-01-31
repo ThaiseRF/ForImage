@@ -8,49 +8,41 @@
 #' @return A dataframe with the folowing information:
 #' \itemize{
 #'   \item {file} : {filename}
-#'   \item {px_width} : {image width in pixels}
-#'   \item {px_height} : {image height in pixels}
-#'   \item {x_scale} : {image x scale factor}
-#'   \item {y_scale} : {image y scale factor}
 #'   \item {z_depth} : {measured focus range depth (z)}}
 #' @importFrom magrittr %>%
-#' @examples
-#' # Get z data from path containing image metadata.
-#' res <- z.xml("filePath")
-#' res
 #' @export
 
-depth.xml <- function(filePath = NULL) {
-  #filePath = "/home/farol/Documents/abundantes"
+depth.xml <- function(xml_file) {
 
-  if (is.null(filePath)) {
-    filePath <- file.path(getwd())
+  if (is.null(xml_file)) {
+    stop("Object not specified.")
   }
 
-  files <- list.files(path = filePath, pattern = c('\\.xml$'))[1]
+  data <- xml2::read_xml(xml_file)
 
-  data  <- lapply(files, function(x) {
-    xml_data <- XML::xmlToList(XML::xmlParse(x))
-    file <- as.character(xml_data$Tags$V5)
-    px_width <- as.double(gsub(",", ".", xml_data$Tags$V11))
-    px_height <- as.double(gsub(",", ".", xml_data$Tags$V12))
-    x_scale <- as.double(gsub(",", ".", xml_data$Scaling$Factor_0))
-    y_scale <- as.double(gsub(",", ".", xml_data$Scaling$Factor_1))
-    v58 <- as.numeric(xml_data$Tags$V58)
-    v59 <- as.numeric(xml_data$Tags$V59)
+  # Filename
+  name <- data %>%
+    xml2::xml_find_all("//Tags/V5") %>%
+    xml2::xml_text()
+  filename <- name[1]
 
-    df <- data.frame(file, px_width, px_height,x_scale, y_scale, v58, v59, stringsAsFactors = FALSE)
+  # First
+  one <- data %>%
+    xml2::xml_find_all("//Tags/V58") %>%
+    xml2::xml_text() %>%
+    as.integer()
 
-    })
+  #Second
+  two <- data %>%
+    xml2::xml_find_all("//Tags/V59") %>%
+    xml2::xml_text() %>%
+    as.integer()
 
-  data <- data.table::rbindlist(data, use.names = TRUE)
+  z_depth <- abs(one[1] - two[1])
+  result <- data.frame(filename, z_depth)
 
-  #print(xm_data)
 
-  df <- dplyr::mutate(data, z = abs(v58 - v59))
-
-  return(df)
-
+  return(result)
 
 
 }

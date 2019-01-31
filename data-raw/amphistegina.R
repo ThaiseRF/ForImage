@@ -2,7 +2,7 @@ library(readr)
 library(plyr)
 
 
-am <- read_csv("data-raw/amphis.csv", col_types =
+am <- read_csv("data-raw/amphistegina.csv", col_types =
                  list(ind = col_double(),
                       altura = col_double(),
                       d1 = col_double(),
