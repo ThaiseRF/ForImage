@@ -1,5 +1,7 @@
 # global reference (will be initialized in .onLoad)
 
+py_c <- reticulate::py_config()
+
 os <- NULL
 builtins <- NULL
 cv2 <- NULL
@@ -9,6 +11,20 @@ measure_dim <- NULL
 
 
 .onLoad <- function(libname, pkgname) {
+
+  if (utils::compareVersion(py_c$version, "3.5") < 0) {
+    stop(
+      paste0(
+        c(
+          "Python 3.5+ is required. If this is installed please set RETICULATE_PYTHON ",
+          "to the path to the Python 3 binary on your system and try re-installing/",
+          "re-loading the package."
+        ),
+        collapse = ""
+      )
+    )
+    return()
+  }
 
   python_path <- system.file("python", package = "forImage")
 

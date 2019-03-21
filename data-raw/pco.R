@@ -21,12 +21,13 @@ model <- genera$genera_model.csv$model
 # Cut model from list ------------
 genera[["genera_model.csv"]] <- NULL
 
-# Mean and sd for all genera PCO to apply in biovolume calculus ------
+# Mean, sd and n for all genera PCO to apply in biovolume calculus ------
 mean <- lapply(lapply(genera, `[[`, "prot"), mean)
 sd <- lapply(lapply(genera, `[[`, "prot"), sd)
+n <- lapply(genera, nrow)
 
 
-data_pco <- bind_rows(mean, sd) %>%
+data_pco <- bind_rows(mean, sd, n) %>%
   rownames_to_column %>%
   gather(var, value,  -rowname) %>%
   spread(rowname, value) %>%
@@ -34,7 +35,7 @@ data_pco <- bind_rows(mean, sd) %>%
   select(-csv) %>%
   mutate(model = model)
 
-names(data_pco) <- c("genera", "mean", "sd", "model")
+names(data_pco) <- c("genera", "mean", "sd", "n","model")
 
 head(data_pco)
 

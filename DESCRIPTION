@@ -14,12 +14,12 @@ License: GPL-3
 Encoding: UTF-8
 Depends: R (>= 3.2.0)
 LazyData: true
-Imports: dplyr,
-    magrittr,
-    tibble,
-    reticulate,
-    data.table,
-    xml2
+Imports: dplyr (>= 0.8.0.1),
+    magrittr (>= 1.5),
+    tibble (>= 2.0.0),
+    reticulate (>= 1.10.0.9004),
+    data.table (>= 1.11.8),
+    xml2 (>= 1.2.0.9000)
 RoxygenNote: 6.1.1
 Suggests: knitr,
     rmarkdown
