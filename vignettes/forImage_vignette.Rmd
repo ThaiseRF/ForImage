@@ -1,13 +1,18 @@
 ---
-title: "forImage - A tutorial"
-author: "Thaise R Freitas"
+title: "Measuring foraminiferal dimension and estimating organic carbon biomass with `forImage` package"
+author: Thaise R Freitas, Eduardo T Bacalhau, Carla C Bonetti
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{forImage - A tutorial}
+  %\VignetteIndexEntry{Measuring foraminiferal dimension and estimating organic carbon biomass with `forImage` package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+
+##Introduction 
+
+If you work with fossil or recent foraminifera and eventually had to measure speciments size, or 
 
 `forImage` is a package developed to facilitate foraminiferal biomass estimate assessment. 
 
