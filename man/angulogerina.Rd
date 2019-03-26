@@ -11,7 +11,7 @@
   \item{d_one}{test minor diameter in  μm (34--156)}
   \item{d_two}{test major diameter in  μm (66.04--237.34)}
   \item{area}{test surface area in μm2 (4654--41915)}
-  \item{pop}{test protoplasm occupancy percentage (6.818--100)}
+  \item{pco}{percent cell occupancy of the test (6.818--100)}
 }}
 \usage{
 angulogerina

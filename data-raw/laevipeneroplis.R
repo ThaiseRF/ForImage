@@ -22,9 +22,9 @@ laevipeneroplis <- rename(la, c(species = "species",
                                 altura  = "h",
                                 d1 = "d_one",
                                 ar = "area",
-                                prot = "pop",
+                                prot = "pco",
                                 d2 = "d_two")
 )
 
 
-devtools::use_data(laevipeneroplis, overwrite = TRUE)
+usethis::use_data(laevipeneroplis, overwrite = TRUE)

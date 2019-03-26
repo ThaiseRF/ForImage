@@ -11,7 +11,7 @@
   \item{h}{test height in μm (28.0--80.0)}
   \item{d_two}{test major diameter in  μm (89.76--261.17)}
   \item{area}{test surface area in μm2 (6636--76089)}
-  \item{pop}{test protoplasm occupancy percentage (9.88--100)}
+  \item{pco}{percent cell occupancy of the test (9.88--100)}
 }}
 \usage{
 loxostomina

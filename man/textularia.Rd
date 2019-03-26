@@ -12,7 +12,7 @@
   \item{d_one}{test minor diameter in μm (40--306)}
   \item{d_two}{test major diameter in  μm (103.8--552.6)}
   \item{area}{test surface area in μm2 (8235--336929)}
-  \item{pop}{test protoplasm occupancy percentage (10.46--100)}
+  \item{pco}{percent cell occupancy of the test (10.46--100)}
 }}
 \usage{
 textularia

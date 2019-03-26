@@ -12,7 +12,7 @@
   \item{d_one}{test minor diameter in μm (26.94--389.73)}
   \item{d_two}{test major diameter in  μm (18.52--662.23)}
   \item{area}{test surface area in μm2 (6294--431271)}
-  \item{pop}{test protoplasm occupancy percentage (13.76--100)}
+  \item{pco}{percent cell occupancy of the test (13.76--100)}
   \item{length}{test length in μm (44.02--609.00)}
   \item{width}{test width in μm (83.72--688.32)}
   \item{model}{adequated geometric model ('10hl'--'17fs')}

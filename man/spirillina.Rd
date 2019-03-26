@@ -11,7 +11,7 @@
   \item{d_one}{test minor diameter in μm (73.71--105.14)}
   \item{radius}{test radius in  μm (36.86--123.73)}
   \item{area}{test surface area in μm2 (4268--34730)}
-  \item{pop}{test protoplasm occupancy percentage (7.10--100)}
+  \item{pco}{percent cell occupancy of the test (7.10--100)}
 }}
 \usage{
 spirillina

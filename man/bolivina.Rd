@@ -12,7 +12,7 @@
   \item{h}{test height in μm (12.5--83.0)}
   \item{d_two}{test major diameter in  μm (60.60--226.21)}
   \item{area}{test surface area in μm2 (3187--72244)}
-  \item{pop}{test protoplasm occupancy percentage (9.72--100)}
+  \item{pco}{percent cell occupancy of the test (9.72--100)}
 }}
 \usage{
 bolivina

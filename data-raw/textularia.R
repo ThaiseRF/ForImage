@@ -23,8 +23,8 @@ textularia <- rename(te, c(species = "species",
                            d1 = "d_one",
                            d2 = "d_two",
                            ar = "area",
-                           prot = "pop")
+                           prot = "pco")
 )
 
 
-devtools::use_data(textularia, overwrite = TRUE)
+usethis::use_data(textularia, overwrite = TRUE)

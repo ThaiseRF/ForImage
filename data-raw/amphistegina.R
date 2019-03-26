@@ -21,8 +21,8 @@ amphistegina <- rename(am, c(ind = "ind",
                              altura  = "h",
                              d1 = "d_one",
                              ar = "area",
-                             prot = "pop")
+                             prot = "pco")
                        )
 
 
-devtools::use_data(amphistegina, overwrite = TRUE)
+usethis::use_data(amphistegina, overwrite = TRUE)

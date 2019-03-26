@@ -21,8 +21,8 @@ patellina <- rename(pa, c(ind = "ind",
                           d1 = "d_one",
                           raio = "radius",
                           ar = "area",
-                          prot = "pop")
+                          prot = "pco")
 )
 
 
-devtools::use_data(patellina, overwrite = TRUE)
+usethis::use_data(patellina, overwrite = TRUE)

@@ -21,8 +21,8 @@ spirillina <- rename(sp, c(ind = "ind",
                            d1 = "d_one",
                            d2 = "radius",
                            ar = "area",
-                           prot = "pop")
+                           prot = "pco")
 )
 
 
-devtools::use_data(spirillina, overwrite = TRUE)
+usethis::use_data(spirillina, overwrite = TRUE)

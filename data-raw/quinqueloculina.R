@@ -27,11 +27,11 @@ quinqueloculina <- plyr::rename(qu, c(species = "species",
                                 d1 = "d_one",
                                 d2 = "d_two",
                                 ar = "area",
-                                prot = "pop",
+                                prot = "pco",
                                 comprimento = "length",
                                 largura = "width",
                                 model = "model")
 )
 
 
-devtools::use_data(quinqueloculina, overwrite = TRUE)
+usethis::use_data(quinqueloculina, overwrite = TRUE)

@@ -22,8 +22,8 @@ angulogerina <- rename(an, c(ind = "ind",
                              d1 = "d_one",
                              d2 = "d_two",
                              ar = "area",
-                             prot = "pop")
+                             prot = "pco")
 )
 
 
-devtools::use_data(angulogerina, overwrite = TRUE)
+usethis::use_data(angulogerina, overwrite = TRUE)

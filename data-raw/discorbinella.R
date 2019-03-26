@@ -23,8 +23,8 @@ discorbinella <- plyr::rename(di, c(species = "species",
                               d1 = "d_one",
                               raio = "radius",
                               ar = "area",
-                              prot = "pop")
+                              prot = "pco")
 )
 
 
-devtools::use_data(discorbinella, overwrite = TRUE)
+usethis::use_data(discorbinella, overwrite = TRUE)

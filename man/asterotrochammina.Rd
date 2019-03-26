@@ -12,7 +12,7 @@
   \item{d_one}{test minor diameter in  μm (77.86--265.50)}
   \item{radius}{test radius in  μm (38.93--132.75)}
   \item{area}{test surface area in μm2 (4761--57577)}
-  \item{pop}{test protoplasm occupancy percentage (15--100)}
+  \item{pco}{percent cell occupancy of the test (15--100)}
 }}
 \usage{
 asterotrochammina

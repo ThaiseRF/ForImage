@@ -10,7 +10,7 @@
   \item{h}{test height in μm (60.0--579.0)}
   \item{d_one}{test diameter in  μm (111.3--1193.1)}
   \item{area}{test surface area in μm2 (9722--3027282)}
-  \item{pop}{test protoplasm occupancy percentage (3.408--100)}
+  \item{pco}{percent cell occupancy of the test (3.408--100)}
 }}
 \usage{
 amphistegina

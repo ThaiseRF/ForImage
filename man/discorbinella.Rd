@@ -12,7 +12,7 @@
   \item{d_one}{test minor diameter in  μm (67.69--197.43)}
   \item{radius}{test radius in  μm (33.85--98.71)}
   \item{area}{test surface area in μm2 (3599--30614)}
-  \item{pop}{test protoplasm occupancy percentage (9.673--100)}
+  \item{pco}{percent cell occupancy of the test (9.673--100)}
 }}
 \usage{
 discorbinella

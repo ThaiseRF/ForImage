@@ -17,8 +17,8 @@ re$prot <- re$prot/100
 rectocibicides <- rename(re, c(ind = "ind",
                                altura  = "h",
                                ar = "area",
-                               prot = "pop")
+                               prot = "pco")
 )
 
 
-devtools::use_data(rectocibicides, overwrite = TRUE)
+usethis::use_data(rectocibicides, overwrite = TRUE)

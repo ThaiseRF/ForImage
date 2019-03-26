@@ -24,8 +24,8 @@ asterotrochammina <- rename(as, c(species = "species",
                                   d1 = "d_one",
                                   raio = "radius",
                                   ar = "area",
-                                  prot = "pop")
+                                  prot = "pco")
 )
 
 
-devtools::use_data(asterotrochammina, overwrite = TRUE)
+usethis::use_data(asterotrochammina, overwrite = TRUE)

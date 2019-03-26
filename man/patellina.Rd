@@ -11,7 +11,7 @@
   \item{d_one}{test minor diameter in μm (84.84--247.46)}
   \item{radius}{test radius in  μm (42.42--123.73)}
   \item{area}{test surface area in μm2 (5653--87838)}
-  \item{pop}{test protoplasm occupancy percentage (9.94--100)}
+  \item{pco}{percent cell occupancy of the test (9.94--100)}
 }}
 \usage{
 patellina

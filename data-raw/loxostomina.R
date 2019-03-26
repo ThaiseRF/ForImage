@@ -21,8 +21,8 @@ loxostomina <- plyr::rename(lo, c(ind = "ind",
                             altura  = "h",
                             d2 = "d_two",
                             ar = "area",
-                            prot = "pop")
+                            prot = "pco")
 )
 
 
-devtools::use_data(loxostomina, overwrite = TRUE)
+usethis::use_data(loxostomina, overwrite = TRUE)

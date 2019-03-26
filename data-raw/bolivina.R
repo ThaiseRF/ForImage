@@ -23,8 +23,8 @@ bolivina <- rename(bo, c(species = "species",
                         altura  = "h",
                         d_two = "d_two",
                         ar = "area",
-                        prot = "pop")
+                        prot = "pco")
 )
 
 
-devtools::use_data(bolivina, overwrite = TRUE)
+usethis::use_data(bolivina, overwrite = TRUE)

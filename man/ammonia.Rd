@@ -12,7 +12,7 @@
   \item{d_one}{test minor diameter in  μm (20--220)}
   \item{d_two}{test major diameter in  μm (75.1--364.6)}
   \item{area}{test surface area in μm2 (4438--107903)}
-  \item{pop}{test protoplasm occupancy percentage (11--100)}
+  \item{pco}{percent cell occupancy of the test (11--100)}
 }}
 \usage{
 ammonia

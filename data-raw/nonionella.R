@@ -23,8 +23,8 @@ nonionella <- plyr::rename(no, c(species = "species",
                            d1 = "d_one",
                            d2 = "d_two",
                            ar = "area",
-                           prot = "pop")
+                           prot = "pco")
 )
 
 
-devtools::use_data(nonionella, overwrite = TRUE)
+usethis::use_data(nonionella, overwrite = TRUE)

@@ -12,7 +12,7 @@
   \item{h}{test height in μm (19.50--294.00)}
   \item{d_two}{test major diameter in  μm (82.99--547.67)}
   \item{area}{test surface area in μm2 (5783--222371)}
-  \item{pop}{test protoplasm occupancy percentage (15.51--100)}
+  \item{pco}{percent cell occupancy of the test (15.51--100)}
 }}
 \usage{
 nonionella

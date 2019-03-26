@@ -12,7 +12,7 @@
   \item{d_one}{test minor diameter in  μm (76.46--266.85)}
   \item{radius}{test radius in  μm (38.23--133.43)}
   \item{area}{test surface area in μm2 (4591--55928)}
-  \item{pop}{test protoplasm occupancy percentage (11.87--100)}
+  \item{pco}{percent cell occupancy of the test (11.87--100)}
 }}
 \usage{
 cibicidoides

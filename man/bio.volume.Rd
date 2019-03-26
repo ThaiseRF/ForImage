@@ -4,14 +4,14 @@
 \alias{bio.volume}
 \title{Biovolume calculus}
 \usage{
-bio.volume(data, pop = 0.76, genus = NULL, ...)
+bio.volume(data, pco = 0.76, genus = NULL, ...)
 }
 \arguments{
 \item{data}{a numeric vector or data frame with size data. Size data parameters by model see.}
 
-\item{pop}{(optional) protoplasm occupancy percentage. Default value set for specific genus in \code{\link{data_pop}}.}
+\item{pco}{(optional) percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.}
 
-\item{genus}{foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pop}}}
+\item{genus}{foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pco}}}
 
 \item{...}{other arguments.}
 }

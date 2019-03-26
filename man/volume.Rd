@@ -29,8 +29,6 @@
 
 }}
 
-\item{pop}{(optional) protoplasm occupancy percentage}
-
 \item{...}{other arguments.}
 }
 \value{
@@ -48,12 +46,9 @@ These geometric models applied in this function are based in the selection made 
 data("ammonia")
 
 #calculate test volume
-df <- volume.total(data = ammonia, model = "10hl", pop = NULL)
+df <- volume.total(data = ammonia, model = "10hl")
 df
 
-#calculate test biovolume with average pop = 0.78
-res <- volume.total(data = ammonia, model = "10hl", pop = 0.78)
-res
 
 }
 \references{
