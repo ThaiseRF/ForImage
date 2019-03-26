@@ -12,9 +12,10 @@ Description:
     With functions developed to calculate foraminiferal test biovolume and estimate cell biomass.
 License: GPL-3
 Encoding: UTF-8
-Depends: R (>= 3.2.0)
+Depends: R (>= 3.2)
 LazyData: true
-Imports: dplyr (>= 0.8.0.1),
+Imports:
+    dplyr (>= 0.8.0.1),
     magrittr (>= 1.5),
     tibble (>= 2.0.0),
     reticulate (>= 1.10.0.9004),
