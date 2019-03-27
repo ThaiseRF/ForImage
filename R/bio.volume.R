@@ -4,8 +4,8 @@
 #' This function calculates foraminifera biovolume, through geometric approximation. To compute others organisms cell volume use \code{\link{volume.total}} function
 #'
 #' @param data a numeric vector or data frame with size data. Size data parameters by model see.
-#' @param genus foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pop}}
-#' @param pop (optional) protoplasm occupancy percentage. Default value set for specific genus in \code{\link{data_pop}}.
+#' @param genus foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pco}}
+#' @param pco (optional) percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.
 #' @param ... other arguments.
 #' @details The function calculates the biovolume of different individuals from the available genera. The geometric models are applied automatically based on adaptation performed by.
 #'
@@ -23,7 +23,7 @@
 #' dat
 #'
 
-bio.volume <- function(data, pop = 0.76, genus = NULL, ...){
+bio.volume <- function(data, pco = 0.76, genus = NULL, ...){
 
   x <- data.frame(data)
 
@@ -35,27 +35,27 @@ bio.volume <- function(data, pop = 0.76, genus = NULL, ...){
     genus <- x$genus
   }
 
-  if ("pop" %in% colnames(x) && !missing(genus)) {
+  if ("pco" %in% colnames(x) && !missing(genus)) {
 
-    pop <- x$pop
+    pco <- x$pco
 
-    d_pop <- forImage::data_pop
+    d_pco <- forImage::data_pco
 
-    if (any(genus == d_pop)) {
+    if (any(genus == d_pco)) {
 
-      x$model <- (d_pop[match(genus, d_pop$genera), ]$model)
+      x$model <- (d_pco[match(genus, d_pco$genera), ]$model)
     }
   }
 
-  if (!("pop" %in% colnames(x)) && !missing(genus)) {
+  if (!("pco" %in% colnames(x)) && !missing(genus)) {
 
-    d_pop <- forImage::data_pop
+    d_pco <- forImage::data_pco
 
-    if (any(genus == d_pop)) {
+    if (any(genus == d_pco)) {
 
-      pop <- (d_pop[match(genus, d_pop$genera), ]$mean)/100
+      pco <- (d_pco[match(genus, d_pco$genera), ]$mean)/100
 
-      x$model <- (d_pop[match(genus, d_pop$genera), ]$model)
+      x$model <- (d_pco[match(genus, d_pco$genera), ]$model)
 
     } else {
       stop("Genus not available in database.")
@@ -63,7 +63,7 @@ bio.volume <- function(data, pop = 0.76, genus = NULL, ...){
   }
 
   v <- forImage::volume.total(x)$vol
-  bv <- v * pop
+  bv <- v * pco
   result <- x %>%
     tibble::as_tibble(.) %>%
     dplyr::rowwise(.) %>%
