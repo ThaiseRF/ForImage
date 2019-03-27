@@ -1,17 +1,19 @@
 #' Foraminifeal genera data for \code{forImage} examples
 #'
 #' This dataset contains protoplasm occupancy mean and standart deviation data of 72 foraminifera genera.
-#' These genera data are originally from previous work - Freitas et al. 2019
+#' These genera data are originally from previous work - Freitas et al. (2019)
 #' @docType data
 #' @keywords dataset
 #' @format A data frame with 72 rows and 3 variables:
 #' \describe{
 #'   \item{genera}{foraminifera genera}
-#'   \item{mean}{mean protoplasm occupancy percentage \code{(pop)}}
-#'   \item{sd}{standard deviation of mean \code{(pop)}}
+#'   \item{mean}{mean protoplasm occupancy percentage \code{(pco)}}
+#'   \item{sd}{standard deviation of mean \code{(pco)}}
+#'   \item{n}{number of specimens}
+#'   \item{model}{fitted geometric model in Freitas et al. (2019)}
 #' }
 #'
-#' @details foraminifera genera with \code{(pop)} available:
+#' @details foraminifera genera with \code{(pco)} available:
 #' \tabular{rlll}{
 #'  \tab"ammonia"\tab"amphis"\tab"angulogerina"\cr
 #'  \tab"archaias"\tab"asterotrochammina"\tab"bolivina"\cr
@@ -39,7 +41,7 @@
 #'  \tab"wiesnerella"
 #' }
 #'
-#' @name data_pop
+#' @name data_pco
 NULL
 
 #' Foraminifeal photomicrographs for \code{forImage} examples
@@ -68,7 +70,7 @@ NULL
 #'   \item{d_one}{test minor diameter in  μm (20--220)}
 #'   \item{d_two}{test major diameter in  μm (75.1--364.6)}
 #'   \item{area}{test surface area in μm2 (4438--107903)}
-#'   \item{pop}{test protoplasm occupancy percentage (11--100)}
+#'   \item{pco}{percent cell occupancy of the test (11--100)}
 #' }
 "ammonia"
 
@@ -83,7 +85,7 @@ NULL
 #'   \item{h}{test height in μm (60.0--579.0)}
 #'   \item{d_one}{test diameter in  μm (111.3--1193.1)}
 #'   \item{area}{test surface area in μm2 (9722--3027282)}
-#'   \item{pop}{test protoplasm occupancy percentage (3.408--100)}
+#'   \item{pco}{percent cell occupancy of the test (3.408--100)}
 #' }
 "amphistegina"
 
@@ -99,7 +101,7 @@ NULL
 #'   \item{d_one}{test minor diameter in  μm (34--156)}
 #'   \item{d_two}{test major diameter in  μm (66.04--237.34)}
 #'   \item{area}{test surface area in μm2 (4654--41915)}
-#'   \item{pop}{test protoplasm occupancy percentage (6.818--100)}
+#'   \item{pco}{percent cell occupancy of the test (6.818--100)}
 #' }
 "angulogerina"
 
@@ -116,7 +118,7 @@ NULL
 #'   \item{d_one}{test minor diameter in  μm (77.86--265.50)}
 #'   \item{radius}{test radius in  μm (38.93--132.75)}
 #'   \item{area}{test surface area in μm2 (4761--57577)}
-#'   \item{pop}{test protoplasm occupancy percentage (15--100)}
+#'   \item{pco}{percent cell occupancy of the test (15--100)}
 #' }
 "asterotrochammina"
 
@@ -133,7 +135,7 @@ NULL
 #'   \item{h}{test height in μm (12.5--83.0)}
 #'   \item{d_two}{test major diameter in  μm (60.60--226.21)}
 #'   \item{area}{test surface area in μm2 (3187--72244)}
-#'   \item{pop}{test protoplasm occupancy percentage (9.72--100)}
+#'   \item{pco}{percent cell occupancy of the test (9.72--100)}
 #' }
 "bolivina"
 
@@ -150,7 +152,7 @@ NULL
 #'   \item{d_one}{test minor diameter in  μm (76.46--266.85)}
 #'   \item{radius}{test radius in  μm (38.23--133.43)}
 #'   \item{area}{test surface area in μm2 (4591--55928)}
-#'   \item{pop}{test protoplasm occupancy percentage (11.87--100)}
+#'   \item{pco}{percent cell occupancy of the test (11.87--100)}
 #' }
 "cibicidoides"
 
@@ -167,7 +169,7 @@ NULL
 #'   \item{d_one}{test minor diameter in  μm (67.69--197.43)}
 #'   \item{radius}{test radius in  μm (33.85--98.71)}
 #'   \item{area}{test surface area in μm2 (3599--30614)}
-#'   \item{pop}{test protoplasm occupancy percentage (9.673--100)}
+#'   \item{pco}{percent cell occupancy of the test (9.673--100)}
 #' }
 "discorbinella"
 
@@ -183,7 +185,7 @@ NULL
 #'   \item{h}{test height in μm (40--633.9)}
 #'   \item{d_one}{test minor diameter in  μm (47--624.2)}
 #'   \item{area}{test surface area in μm2 (8827--306012)}
-#'   \item{pop}{test protoplasm occupancy percentage (15.24--100)}
+#'   \item{pco}{percent cell occupancy of the test (15.24--100)}
 #'   \item{d_two}{test major diameter in  μm (169.2--544.0) - The NA's related to one species of this genus that don't required this measure}
 #' }
 "laevipeneroplis"
@@ -200,7 +202,7 @@ NULL
 #'   \item{h}{test height in μm (28.0--80.0)}
 #'   \item{d_two}{test major diameter in  μm (89.76--261.17)}
 #'   \item{area}{test surface area in μm2 (6636--76089)}
-#'   \item{pop}{test protoplasm occupancy percentage (9.88--100)}
+#'   \item{pco}{percent cell occupancy of the test (9.88--100)}
 #' }
 "loxostomina"
 
@@ -217,7 +219,7 @@ NULL
 #'   \item{h}{test height in μm (19.50--294.00)}
 #'   \item{d_two}{test major diameter in  μm (82.99--547.67)}
 #'   \item{area}{test surface area in μm2 (5783--222371)}
-#'   \item{pop}{test protoplasm occupancy percentage (15.51--100)}
+#'   \item{pco}{percent cell occupancy of the test (15.51--100)}
 #' }
 "nonionella"
 
@@ -233,7 +235,7 @@ NULL
 #'   \item{d_one}{test minor diameter in μm (84.84--247.46)}
 #'   \item{radius}{test radius in  μm (42.42--123.73)}
 #'   \item{area}{test surface area in μm2 (5653--87838)}
-#'   \item{pop}{test protoplasm occupancy percentage (9.94--100)}
+#'   \item{pco}{percent cell occupancy of the test (9.94--100)}
 #' }
 "patellina"
 
@@ -250,7 +252,7 @@ NULL
 #'   \item{d_one}{test minor diameter in μm (26.94--389.73)}
 #'   \item{d_two}{test major diameter in  μm (18.52--662.23)}
 #'   \item{area}{test surface area in μm2 (6294--431271)}
-#'   \item{pop}{test protoplasm occupancy percentage (13.76--100)}
+#'   \item{pco}{percent cell occupancy of the test (13.76--100)}
 #'   \item{length}{test length in μm (44.02--609.00)}
 #'   \item{width}{test width in μm (83.72--688.32)}
 #'   \item{model}{adequated geometric model ('10hl'--'17fs')}
@@ -268,7 +270,7 @@ NULL
 #'   \item{ind}{number of individuals}
 #'   \item{h}{test height in μm (22.00--101.50)}
 #'   \item{area}{test surface area in μm2 (3450--674280)}
-#'   \item{pop}{test protoplasm occupancy percentage (10--100)}
+#'   \item{pco}{percent cell occupancy of the test (10--100)}
 #'
 #' }
 "rectocibicides"
@@ -285,7 +287,7 @@ NULL
 #'   \item{d_one}{test minor diameter in μm (73.71--105.14)}
 #'   \item{radius}{test radius in  μm (36.86--123.73)}
 #'   \item{area}{test surface area in μm2 (4268--34730)}
-#'   \item{pop}{test protoplasm occupancy percentage (7.10--100)}
+#'   \item{pco}{percent cell occupancy of the test (7.10--100)}
 #' }
 "spirillina"
 
@@ -302,6 +304,6 @@ NULL
 #'   \item{d_one}{test minor diameter in μm (40--306)}
 #'   \item{d_two}{test major diameter in  μm (103.8--552.6)}
 #'   \item{area}{test surface area in μm2 (8235--336929)}
-#'   \item{pop}{test protoplasm occupancy percentage (10.46--100)}
+#'   \item{pco}{percent cell occupancy of the test (10.46--100)}
 #' }
 "textularia"
