@@ -4,7 +4,7 @@
 \alias{volume.total}
 \title{Volumetric calculus of organisms}
 \usage{
-\method{volume}{total}(data, model = NULL, pop = NULL, ...)
+\method{volume}{total}(data, model = NULL, pco = NULL, ...)
 }
 \arguments{
 \item{data}{data frame containing size data. Size data parameters by model see.}
@@ -29,17 +29,19 @@
 
 }}
 
+\item{pco}{other arguments.}
+
 \item{...}{other arguments.}
 }
 \value{
-A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pop} is informed.
+A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
 }
 \description{
 The function calculates organisms volume based on geometric approximation.
 }
 \details{
 These geometric models applied in this function are based in the selection made by Freitas et al. Which were mainly based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}. Some other formulas were adapted \code{('.fs')} to better calculate the test volume of benthic foraminifera.
- For more information, see \href{changelater}{Freitas et al.}
+ For more information, see \href{Freitas et al. (2019)}{Freitas et al. (2019)}
 }
 \examples{
 #Ammonia size data

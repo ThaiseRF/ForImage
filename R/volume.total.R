@@ -23,12 +23,12 @@
 #'   \item \code{'ahx'} : area x heigth
 #'
 #' }
-#' @param pop (optional) protoplasm occupancy percentage
+#' @param pco other arguments.
 #' @param ... other arguments.
 #' @details These geometric models applied in this function are based in the selection made by Freitas et al. Which were mainly based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}. Some other formulas were adapted \code{('.fs')} to better calculate the test volume of benthic foraminifera.
-#'  For more information, see \href{changelater}{Freitas et al.}
+#'  For more information, see \href{Freitas et al. (2019)}{Freitas et al. (2019)}
 #'
-#' @return A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pop} is informed.
+#' @return A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #' @references
 #' \itemize{
@@ -45,17 +45,14 @@
 #' data("ammonia")
 #'
 #' #calculate test volume
-#' df <- volume.total(data = ammonia, model = "10hl", pop = NULL)
+#' df <- volume.total(data = ammonia, model = "10hl")
 #' df
 #'
-#' #calculate test biovolume with average pop = 0.78
-#' res <- volume.total(data = ammonia, model = "10hl", pop = 0.78)
-#' res
 #'
 #' @rdname volume
 #' @export volume.total
 
-volume.total <- function(data, model = NULL, pop = NULL, ...) {
+volume.total <- function(data, model = NULL, pco = NULL, ...) {
 
   x <- data.frame(data)
 
@@ -88,10 +85,10 @@ volume.total <- function(data, model = NULL, pop = NULL, ...) {
                                                                                                             ifelse(model == "axh", axh(area, h),.))))))))))))))
 
 
-  if (!is.null(pop) || "pop" %in% colnames(x)) {
+  if (!is.null(pco) || "pco" %in% colnames(x)) {
     result <- x %>%
       tibble::as.tibble() %>%
-      dplyr::mutate(vol = vol, biovol = vol * pop)
+      dplyr::mutate(vol = vol, biovol = vol * pco)
 
     result
 
