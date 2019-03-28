@@ -42,7 +42,7 @@ class Utilities:
         morphed = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
         #thresh = cv2.erode(morphed, None, iterations=2)
         thresh = cv2.dilate(morphed, None, iterations=2)
-        im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+        contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
         contour_list = []
         area = []
