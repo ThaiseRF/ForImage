@@ -7,7 +7,7 @@
 depth.xml(xml_file)
 }
 \arguments{
-\item{filePath}{Path to image metadata files, \code{'.xml', '.tif_meta.xml'}}
+\item{xml_file}{image metadata file, \code{'.xml', '.tif_meta.xml'}}
 }
 \value{
 A dataframe with the folowing information:
