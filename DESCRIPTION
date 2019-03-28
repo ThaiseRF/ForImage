@@ -2,16 +2,19 @@ Package: forImage
 Type: Package
 Title: Foraminiferal image analysis and test measurement
 Version: 0.1.0
+Authors@R: c(
+    person("Thaise", "R. Freitas", , "thaisericardo.freitas@gmail.com", c("aut", "cre")),
+    person("Eduardo", "Bacalhau", , role = "aut"),
+    person("Carla", "Bonetti", , role = "aut"))
 Maintainer: Thaise Ricardo <thaisericardo.freitas@gmail.com>
-Description: It allows measurement of foraminiferal test and other unicellulars organisms size.
+Description:
+    It allows measurement of foraminiferal test and other unicellulars organisms size.
     With functions developed to calculate foraminiferal test biovolume and estimate cell biomass.
 License: GPL-3
 Encoding: UTF-8
-Depends:
-    R (>= 3.2)
+Depends: R (>= 3.2.0)
 LazyData: true
-Imports:
-    dplyr,
+Imports: dplyr,
     magrittr,
     tibble,
     reticulate,
@@ -24,3 +27,4 @@ VignetteBuilder: knitr
 Author: Thaise R. Freitas [aut, cre], 
   Eduardo Bacalhau [aut],
   Carla Bonetti [aut]
+  
