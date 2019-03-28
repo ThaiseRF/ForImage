@@ -4,7 +4,7 @@ Title: Foraminiferal image analysis and test measurement
 Version: 0.1.0
 Maintainer: Thaise Ricardo <thaisericardo.freitas@gmail.com>
 Description: It allows measurement of foraminiferal test and other unicellulars organisms size.
-With functions developed to calculate foraminiferal test biovolume and estimate cell biomass.
+    With functions developed to calculate foraminiferal test biovolume and estimate cell biomass.
 License: GPL-3
 Encoding: UTF-8
 Depends:
