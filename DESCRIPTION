@@ -2,17 +2,6 @@ Package: forImage
 Type: Package
 Title: Foraminiferal image analysis and test measurement
 Version: 0.1.0
-Authors@R: 
-    c(person(given = "Thaise",
-             family = "R. Freitas",
-             role = c("aut", "cre"),
-             email = "thaisericardo.freitas@gmail.com"),
-      person(given = "Eduardo",
-             family = "Bacalhau",
-             role = c("aut")),       
-      person(given = "Carla",
-             family = "Bonetti",
-             role = c("aut")))
 Maintainer: Thaise Ricardo <thaisericardo.freitas@gmail.com>
 Description:
     It allows measurement of foraminiferal test and other unicellulars organisms size.
