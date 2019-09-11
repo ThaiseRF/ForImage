@@ -13,12 +13,14 @@ multi-software dependent methods for biometry and biomass estimation.
 
 The package **requires** Python \>= 3.5 and the following Python
 modules: `scipy`, `imutils`, `numpy`, `pandas`, `Pillow` and `OpenCV`
-via pip (version 3.4.3.18). On Ubuntu:
+via pip (version 4.1.1.26). On Ubuntu:
 
 ``` bash
 sudo apt-get install python-pip
 sudo pip install pip --upgrade
 sudo pip install scipy
+....
+sudo pip install opencv-python==4.1.1.26
 ```
 
 On Windows:
@@ -26,6 +28,8 @@ On Windows:
 ``` bash
 python -m pip install --upgrade pip
 pip install scipy
+....
+pip install opencv-python==4.1.1.26
 ```
 
 You can install `forImage` from github with:
