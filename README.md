@@ -13,7 +13,7 @@ multi-software dependent methods for biometry and biomass estimation.
 
 The package **requires** Python \>= 3.5 and the following Python
 modules: `scipy`, `imutils`, `numpy`, `pandas`, `Pillow` and `OpenCV`
-via pip (version 4.1.1.26). On Ubuntu:
+(version 4.1.1.26) via pip. On Ubuntu:
 
 ``` bash
 sudo apt-get install python-pip
