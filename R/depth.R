@@ -18,6 +18,8 @@ depth.xml <- function(xml_file) {
     stop("Object not specified.")
   }
 
+  filename <- sub('\\.tif_meta.xml$', '', xml_file)
+
   data <- xml2::read_xml(xml_file)
 
   # check data
