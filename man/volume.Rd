@@ -4,7 +4,7 @@
 \alias{volume.total}
 \title{Volumetric calculus of organisms}
 \usage{
-\method{volume}{total}(data, model = NULL, pco = NULL, ...)
+\method{volume}{total}(data, model = NULL, ...)
 }
 \arguments{
 \item{data}{data frame containing size data. Size data parameters by model see.}
@@ -29,9 +29,9 @@
 
 }}
 
-\item{pco}{other arguments.}
-
 \item{...}{other arguments.}
+
+\item{pco}{other arguments.}
 }
 \value{
 A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
@@ -48,8 +48,12 @@ These geometric models applied in this function are based in the selection made 
 data("ammonia")
 
 #calculate test volume
-df <- volume.total(data = ammonia, model = "10hl")
-df
+volume.total(ammonia, model = "10hl")
+
+
+#with model argument in column (for more than 1 model)
+am <- dplyr::mutate(ammonia, model = "10hl")
+volume.total(am)
 
 
 }
