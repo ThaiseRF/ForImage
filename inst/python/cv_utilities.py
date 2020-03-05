@@ -1,8 +1,8 @@
 from __future__ import print_function, division
 from builtins import input
-import imutils
 import numpy as np
 import cv2
+import imutils
 
 
 class Utilities:
