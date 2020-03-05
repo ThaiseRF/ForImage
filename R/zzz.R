@@ -6,8 +6,8 @@ os <- NULL
 builtins <- NULL
 cv2 <- NULL
 imutils <- NULL
-utilities <- NULL
-measure_dim <- NULL
+#utilities <- NULL
+#measure_dim <- NULL
 
 
 .onLoad <- function(libname, pkgname) {
@@ -32,8 +32,8 @@ measure_dim <- NULL
   builtins <<- reticulate::import("builtins", delay_load = TRUE)
   cv2 <<- reticulate::import("cv2", delay_load = TRUE)
   imutils <<- reticulate::import("imutils", delay_load = TRUE)
-  utilities <<- reticulate::import_from_path("cv_utilities", path = python_path)
-  measure_dim <<- reticulate::import_from_path("measure_dim", path = python_path)
+ # utilities <<- reticulate::import_from_path("cv_utilities", path = python_path)
+ # measure_dim <<- reticulate::import_from_path("measure_dim", path = python_path)
 
 }
 

@@ -29,17 +29,19 @@
 #' @export
 
 install_measure <- function(method = "auto", conda = "auto", envname = NULL,
-                            extra_packages = NULL, pip = TRUE,
+                            extra_packages = NULL, pip = F,
                             ...) {
 
+
+
     pack = c(
-        "openssl",
+        #"openssl",
         "numpy",
         "scipy",
         "imutils",
         "Pillow",
         "pandas",
-        "opencv-python==4.1.1.26"
+        "opencv"
         )
 
     packages = c(pack, extra_packages)
@@ -50,7 +52,7 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
         envname        = envname,
         method         = method,
         conda          = conda,
-        pip            = TRUE,
+        pip            = pip,
         ...
     )
 
