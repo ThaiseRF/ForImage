@@ -19,6 +19,12 @@
 
 measure <- function(filePath, ...) {
 
+  python_path <- system.file("python", package = "forImage")
+
+  utilities <<- reticulate::import_from_path("cv_utilities", path = python_path)
+  measure_dim <<- reticulate::import_from_path("measure_dim", path = python_path)
+
+
   os <- reticulate::import("os")
   utils <- utilities$Utilities()
   cv <- measure_dim$ComputerVision()
