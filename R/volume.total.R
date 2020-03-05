@@ -45,26 +45,30 @@
 #' data("ammonia")
 #'
 #' #calculate test volume
-#' df <- volume.total(data = ammonia, model = "10hl")
-#' df
+#' volume.total(ammonia, model = "10hl")
+#'
+#'
+#' #with model argument in column (for more than 1 model)
+#' am <- dplyr::mutate(ammonia, model = "10hl")
+#' volume.total(am)
 #'
 #'
 #' @rdname volume
 #' @export volume.total
 
-volume.total <- function(data, model = NULL, pco = NULL, ...) {
+volume.total <- function(data, model = NULL, ...) {
 
   x <- data.frame(data)
 
   if (!is.character(model) && !("model" %in% colnames(x))) {
     stop("Geometric model not specified")
 
-    if (!any(model == c("1hl", "2sl", "3hl", "4hl",
-                  "6fs", "7fs","8hl", "10hl", "11fs",
-                  "12v", "13hlsl", "14hl", "15hl", "17fs", "axh"))) {
+    if(!any(model == c("1hl", "2sl", "3hl", "4hl", "5hl",
+                       "6fs", "7fs","8hl", "10hl", "11fs",
+                       "12v", "13hlsl", "14hl", "15hl", "17fs", "axh"))) {
       stop("Unknown 'model' argument specified")
-
     }
+
   }
 
 
@@ -84,22 +88,11 @@ volume.total <- function(data, model = NULL, pco = NULL, ...) {
                                                                                                      ifelse(model == "17fs", dypyramid(h, length, width),
                                                                                                             ifelse(model == "axh", axh(area, h),.))))))))))))))
 
+  result <- x %>%
+    tibble::as.tibble() %>%
+    dplyr::mutate(vol = vol)
 
-  if (!is.null(pco) || "pco" %in% colnames(x)) {
-    result <- x %>%
-      tibble::as.tibble() %>%
-      dplyr::mutate(vol = vol, biovol = vol * pco)
 
-    result
-
-  } else {
-    result <- x %>%
-      tibble::as.tibble() %>%
-      dplyr::mutate(vol = vol)
-
-    result
-
-  }
 
   return(result)
 
