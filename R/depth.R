@@ -10,9 +10,16 @@
 #'   \item {file} : {filename}
 #'   \item {z_depth} : {measured focus range depth (z)}}
 #' @importFrom magrittr %>%
-#' @export
 
-depth.xml <- function(xml_file) {
+
+#' @export
+depth <- function(x, ...){
+  UseMethod("depth")
+}
+
+
+#' @export
+depth.xml <- function(xml_file, ...) {
 
   if (is.null(xml_file)) {
     stop("Object not specified.")
@@ -70,4 +77,5 @@ depth.xml <- function(xml_file) {
 
 
 }
+
 
