@@ -4,7 +4,14 @@
 \alias{install_measure}
 \title{Install python packages dependencies for measure function}
 \usage{
-install_measure()
+install_measure(
+  method = "auto",
+  conda = "auto",
+  envname = NULL,
+  extra_packages = NULL,
+  pip = F,
+  ...
+)
 }
 \arguments{
 \item{method}{Installation method. By default, "auto" automatically finds a
@@ -16,7 +23,7 @@ available on Windows.}
 
 \item{envname}{Name of environment to install packages into.}
 
-\item{extra_packages}{Additional packages}
+\item{extra_packages}{Additional packages if needed.}
 
 \item{pip}{Install from pip, if possible.}
 

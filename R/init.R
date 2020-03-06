@@ -51,3 +51,8 @@ half_elliptic_prism <- function(h, d_one, d_two) { vol <- (pi * h * d_one * d_tw
 dypyramid <- function(h, length, width) { vol <- (1 * ((length * width)/2) * h)/3 }
 
 axh <- function(area, h) { vol <- area * h}
+
+## quiets concerns of R CMD check
+if(getRversion() >= "2.15.1")  {
+  utils::globalVariables(c(".", "d_one", "d_two", "h", "width", "area", "vol", "utilities", "measure_dim"))
+}

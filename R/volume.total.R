@@ -23,7 +23,6 @@
 #'   \item \code{'ahx'} : area x heigth
 #'
 #' }
-#' @param pco other arguments.
 #' @param ... other arguments.
 #' @details These geometric models applied in this function are based in the selection made by Freitas et al. Which were mainly based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}. Some other formulas were adapted \code{('.fs')} to better calculate the test volume of benthic foraminifera.
 #'  For more information, see \href{Freitas et al. (2019)}{Freitas et al. (2019)}
