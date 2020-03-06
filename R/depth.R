@@ -1,9 +1,10 @@
 #' Import image object depth (Z)
 #'
-#' The function retrieve the object depth information from image metadata as source.
+#' The function retrieves the object depth information from image metadata as source. Insert image file if metadata is embedded, or separate metadata file if not.
 #'
 #'
-#' @param xml_file image metadata file, \code{'.xml', '.tif_meta.xml'}
+#' @param x file containing metadata, if xml type: \code{'.xml', '.tif_meta.xml'}
+#' @param ... other arguments.
 #'
 #' @return A dataframe with the folowing information:
 #' \itemize{
@@ -19,7 +20,10 @@ depth <- function(x, ...){
 
 
 #' @export
-depth.xml <- function(xml_file, ...) {
+#' @rdname depth
+depth.xml <- function(x, ...) {
+
+  xml_file <- x
 
   if (is.null(xml_file)) {
     stop("Object not specified.")

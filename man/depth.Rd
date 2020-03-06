@@ -2,12 +2,17 @@
 % Please edit documentation in R/depth.R
 \name{depth}
 \alias{depth}
+\alias{depth.xml}
 \title{Import image object depth (Z)}
 \usage{
 depth(x, ...)
+
+\method{depth}{xml}(x, ...)
 }
 \arguments{
-\item{xml_file}{image metadata file, \code{'.xml', '.tif_meta.xml'}}
+\item{x}{file containing metadata, if xml type: \code{'.xml', '.tif_meta.xml'}}
+
+\item{...}{other arguments.}
 }
 \value{
 A dataframe with the folowing information:
@@ -16,5 +21,5 @@ A dataframe with the folowing information:
   \item {z_depth} : {measured focus range depth (z)}}
 }
 \description{
-The function retrieve the object depth information from image metadata as source.
+The function retrieves the object depth information from image metadata as source. Insert image file if metadata is embedded, or separate metadata file if not.
 }
