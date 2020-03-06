@@ -20,7 +20,7 @@ The package is proposed as an alternative to manual and/or multi-software depend
 
 ## Installation
 
-The package **requires** Python >= 3.5.
+The package **requires** Python >= 3.5. 
 
 You can install `forImage` from github with:
 
