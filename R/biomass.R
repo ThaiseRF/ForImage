@@ -5,7 +5,7 @@
 #' See details \sQuote{Details}:
 #'
 #' @usage biomass(biovolume, method = "michaels")
-#' @param biovolume numeric value, object or data.frame with cell volume values.
+#' @param biovolume numeric value, object or data.frame with cell living volume values.
 #' @param method The methods of convertion from biovolume to biomass are listed below, default is \code{'michaels'}:
 #' \itemize{
 #'   \item \code{'saidova'} : adopted cell density of 1.027 g/cm3;
