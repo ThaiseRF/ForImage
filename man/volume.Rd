@@ -30,8 +30,6 @@
 }}
 
 \item{...}{other arguments.}
-
-\item{pco}{other arguments.}
 }
 \value{
 A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
