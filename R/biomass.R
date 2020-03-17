@@ -60,7 +60,7 @@ biomass <- function(biovolume, method = "michaels"){
 
   if (method == "saidova" | method == "Saidova") {
 
-    b = x$vol * 0.1027
+    b = x$biovol * 0.1027
 
     result <- x %>%
       tibble::as.tibble() %>%
@@ -69,7 +69,7 @@ biomass <- function(biovolume, method = "michaels"){
 
     } else if (method == "strathmann" | method == "Strathmann") {
 
-      b <- x$vol * 0.110
+      b <- x$biovol * 0.110
 
       result <- x %>%
         tibble::as.tibble() %>%
@@ -78,7 +78,7 @@ biomass <- function(biovolume, method = "michaels"){
 
     } else if (method == "gerlach" | method == "Gerlach") {
 
-      b <- x$vol * 0.113
+      b <- x$biovol * 0.113
 
       result <- x %>%
         tibble::as.tibble() %>%
@@ -87,7 +87,7 @@ biomass <- function(biovolume, method = "michaels"){
 
     } else if (method == "turley" | method == "Turley") {
 
-      b <- x$vol * 0.132
+      b <- x$biovol * 0.132
 
       result <- x %>%
         tibble::as.tibble() %>%
@@ -96,7 +96,7 @@ biomass <- function(biovolume, method = "michaels"){
 
     } else if (method == "putt" | method == "Putt") {
 
-      b <- x$vol * 0.140
+      b <- x$biovol * 0.140
 
       result <- x %>%
         tibble::as.tibble() %>%
@@ -105,7 +105,7 @@ biomass <- function(biovolume, method = "michaels"){
 
     } else if (method == "michaels" | method == "Michaels") {
 
-      b <- x$vol * 0.089
+      b <- x$biovol * 0.089
 
       result <- x %>%
         tibble::as.tibble() %>%
