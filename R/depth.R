@@ -11,16 +11,13 @@
 #'   \item {file} : {filename}
 #'   \item {z_depth} : {measured focus range depth (z)}}
 #' @importFrom magrittr %>%
-
-
 #' @export
 depth <- function(x, ...){
   UseMethod("depth")
 }
 
-
-#' @export
 #' @rdname depth
+#' @export
 depth.xml <- function(x, ...) {
 
   xml_file <- x

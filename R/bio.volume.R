@@ -15,13 +15,12 @@
 #' @seealso \code{\link{biomass}}
 #' @seealso \code{\link{measure}}
 #' @importFrom magrittr %>%
-#' @export
 #' @examples
 #' # Calculate biovolume for different genera
 #' data(ammonia)
 #' dat <- bio.volume(ammonia, genus= "ammonia")
-#' dat
-#'
+#' da
+#' @export
 
 bio.volume <- function(data, pco = 0.76, genus = NULL, ...){
 
