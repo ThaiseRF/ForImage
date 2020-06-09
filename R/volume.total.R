@@ -51,9 +51,8 @@
 #' am <- dplyr::mutate(ammonia, model = "10hl")
 #' volume.total(am)
 #'
-#'
-#' @rdname volume
 #' @export volume.total
+#' @rdname volume
 
 volume.total <- function(data, model = NULL, ...) {
 
@@ -88,7 +87,7 @@ volume.total <- function(data, model = NULL, ...) {
                                                                                                             ifelse(model == "axh", axh(area, h),.))))))))))))))
 
   result <- x %>%
-    tibble::as.tibble() %>%
+    tibble::as_tibble() %>%
     dplyr::mutate(vol = vol)
 
 

@@ -63,7 +63,7 @@ biomass <- function(biovolume, method = "michaels"){
     b = x$biovol * 0.1027
 
     result <- x %>%
-      tibble::as.tibble() %>%
+      tibble::as_tibble() %>%
       dplyr::mutate(biomass = b/1.0e6)
     result
 
@@ -72,7 +72,7 @@ biomass <- function(biovolume, method = "michaels"){
       b <- x$biovol * 0.110
 
       result <- x %>%
-        tibble::as.tibble() %>%
+        tibble::as_tibble() %>%
         dplyr::mutate(biomass = b/1.0e6)
       result
 
@@ -81,7 +81,7 @@ biomass <- function(biovolume, method = "michaels"){
       b <- x$biovol * 0.113
 
       result <- x %>%
-        tibble::as.tibble() %>%
+        tibble::as_tibble() %>%
         dplyr::mutate(biomass = b/1.0e6)
       result
 
@@ -90,7 +90,7 @@ biomass <- function(biovolume, method = "michaels"){
       b <- x$biovol * 0.132
 
       result <- x %>%
-        tibble::as.tibble() %>%
+        tibble::as_tibble() %>%
         dplyr::mutate(biomass = b/1.0e6)
       result
 
@@ -99,7 +99,7 @@ biomass <- function(biovolume, method = "michaels"){
       b <- x$biovol * 0.140
 
       result <- x %>%
-        tibble::as.tibble() %>%
+        tibble::as_tibble() %>%
         dplyr::mutate(biomass = b/1.0e6)
       result
 
@@ -108,7 +108,7 @@ biomass <- function(biovolume, method = "michaels"){
       b <- x$biovol * 0.089
 
       result <- x %>%
-        tibble::as.tibble() %>%
+        tibble::as_tibble() %>%
         dplyr::mutate(biomass = b/1.0e6)
       result
 

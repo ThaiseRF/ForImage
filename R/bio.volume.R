@@ -19,7 +19,7 @@
 #' # Calculate biovolume for different genera
 #' data(ammonia)
 #' dat <- bio.volume(ammonia, genus= "ammonia")
-#' da
+#' dat
 #' @export
 
 bio.volume <- function(data, pco = 0.76, genus = NULL, ...){

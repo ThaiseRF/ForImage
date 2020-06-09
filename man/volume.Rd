@@ -53,7 +53,6 @@ volume.total(ammonia, model = "10hl")
 am <- dplyr::mutate(ammonia, model = "10hl")
 volume.total(am)
 
-
 }
 \references{
 \itemize{
