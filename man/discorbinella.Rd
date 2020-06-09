@@ -4,7 +4,8 @@
 \name{discorbinella}
 \alias{discorbinella}
 \title{Discorbinella size data}
-\format{A data frame with 318 rows and 7 variables:
+\format{
+A data frame with 318 rows and 7 variables:
 \describe{
   \item{species}{species of genus Discorbinella from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -13,7 +14,8 @@
   \item{radius}{test radius in  μm (33.85--98.71)}
   \item{area}{test surface area in μm2 (3599--30614)}
   \item{pco}{percent cell occupancy of the test (9.673--100)}
-}}
+}
+}
 \usage{
 discorbinella
 }

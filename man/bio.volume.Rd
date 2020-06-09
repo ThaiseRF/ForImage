@@ -25,8 +25,7 @@ The function calculates the biovolume of different individuals from the availabl
 # Calculate biovolume for different genera
 data(ammonia)
 dat <- bio.volume(ammonia, genus= "ammonia")
-dat
-
+da
 }
 \seealso{
 \code{\link{volume.total}}

@@ -4,7 +4,8 @@
 \name{quinqueloculina}
 \alias{quinqueloculina}
 \title{Quinqueloculina size data}
-\format{A data frame with 688 rows and 10 variables:
+\format{
+A data frame with 688 rows and 10 variables:
 \describe{
   \item{species}{species of genus Quinqueloculina from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -16,7 +17,8 @@
   \item{length}{test length in μm (44.02--609.00)}
   \item{width}{test width in μm (83.72--688.32)}
   \item{model}{adequated geometric model ('10hl'--'17fs')}
-}}
+}
+}
 \usage{
 quinqueloculina
 }

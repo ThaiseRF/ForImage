@@ -4,7 +4,8 @@
 \name{ammonia}
 \alias{ammonia}
 \title{Ammonia size data}
-\format{A data frame with 867 rows and 7 variables:
+\format{
+A data frame with 867 rows and 7 variables:
 \describe{
   \item{species}{species of genus Ammonia from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -13,7 +14,8 @@
   \item{d_two}{test major diameter in  μm (75.1--364.6)}
   \item{area}{test surface area in μm2 (4438--107903)}
   \item{pco}{percent cell occupancy of the test (11--100)}
-}}
+}
+}
 \usage{
 ammonia
 }

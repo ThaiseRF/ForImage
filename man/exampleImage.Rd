@@ -4,7 +4,9 @@
 \name{exampleImage}
 \alias{exampleImage}
 \title{Foraminifeal photomicrographs for \code{forImage} examples}
-\format{Image objects with variable dimension and resolution.}
+\format{
+Image objects with variable dimension and resolution.
+}
 \description{
 This dataset contains image files of several foraminiferal genera.
 These files are originally from previous work - Freitas et al. (2019)

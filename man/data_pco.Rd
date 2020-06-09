@@ -4,14 +4,16 @@
 \name{data_pco}
 \alias{data_pco}
 \title{Foraminifeal genera data for \code{forImage} examples}
-\format{A data frame with 72 rows and 3 variables:
+\format{
+A data frame with 72 rows and 3 variables:
 \describe{
   \item{genera}{foraminifera genera}
   \item{mean}{mean protoplasm occupancy percentage \code{(pco)}}
   \item{sd}{standard deviation of mean \code{(pco)}}
   \item{n}{number of specimens}
   \item{model}{fitted geometric model in Freitas et al. (2019)}
-}}
+}
+}
 \description{
 This dataset contains protoplasm occupancy mean and standart deviation data of 72 foraminifera genera.
 These genera data are originally from previous work - Freitas et al. (2019)

@@ -4,14 +4,16 @@
 \name{rectocibicides}
 \alias{rectocibicides}
 \title{Rectocibicides size data}
-\format{A data frame with 199 rows and 4 variables:
+\format{
+A data frame with 199 rows and 4 variables:
 \describe{
   \item{ind}{number of individuals}
   \item{h}{test height in μm (22.00--101.50)}
   \item{area}{test surface area in μm2 (3450--674280)}
   \item{pco}{percent cell occupancy of the test (10--100)}
 
-}}
+}
+}
 \usage{
 rectocibicides
 }

@@ -4,7 +4,8 @@
 \name{laevipeneroplis}
 \alias{laevipeneroplis}
 \title{Laevipeneroplis size data}
-\format{A data frame with 79 rows and 7 variables:
+\format{
+A data frame with 79 rows and 7 variables:
 \describe{
   \item{species}{species of genus Laevipeneroplis from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -13,7 +14,8 @@
   \item{area}{test surface area in μm2 (8827--306012)}
   \item{pco}{percent cell occupancy of the test (15.24--100)}
   \item{d_two}{test major diameter in  μm (169.2--544.0) - The NA's related to one species of this genus that don't required this measure}
-}}
+}
+}
 \usage{
 laevipeneroplis
 }

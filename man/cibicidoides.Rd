@@ -4,7 +4,8 @@
 \name{cibicidoides}
 \alias{cibicidoides}
 \title{Cibicidoides size data}
-\format{A data frame with 118 rows and 7 variables:
+\format{
+A data frame with 118 rows and 7 variables:
 \describe{
   \item{species}{species of genus Cibicidoides from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -13,7 +14,8 @@
   \item{radius}{test radius in  μm (38.23--133.43)}
   \item{area}{test surface area in μm2 (4591--55928)}
   \item{pco}{percent cell occupancy of the test (11.87--100)}
-}}
+}
+}
 \usage{
 cibicidoides
 }

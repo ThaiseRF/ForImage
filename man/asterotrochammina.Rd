@@ -4,7 +4,8 @@
 \name{asterotrochammina}
 \alias{asterotrochammina}
 \title{Asterotrochammina size data}
-\format{A data frame with 335 rows and 7 variables:
+\format{
+A data frame with 335 rows and 7 variables:
 \describe{
   \item{species}{species of genus Asterotrochammina from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -13,7 +14,8 @@
   \item{radius}{test radius in  μm (38.93--132.75)}
   \item{area}{test surface area in μm2 (4761--57577)}
   \item{pco}{percent cell occupancy of the test (15--100)}
-}}
+}
+}
 \usage{
 asterotrochammina
 }

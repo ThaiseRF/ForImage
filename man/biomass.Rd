@@ -7,7 +7,7 @@
 biomass(biovolume, method = "michaels")
 }
 \arguments{
-\item{biovolume}{numeric value, object or data.frame with cell volume values.}
+\item{biovolume}{numeric value, object or data.frame with cell living volume values.}
 
 \item{method}{The methods of convertion from biovolume to biomass are listed below, default is \code{'michaels'}:
 \itemize{

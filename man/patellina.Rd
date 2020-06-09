@@ -4,7 +4,8 @@
 \name{patellina}
 \alias{patellina}
 \title{Patellina size data}
-\format{A data frame with 79 rows and 6 variables:
+\format{
+A data frame with 79 rows and 6 variables:
 \describe{
   \item{ind}{number of individuals by species}
   \item{h}{test height in μm (24--66)}
@@ -12,7 +13,8 @@
   \item{radius}{test radius in  μm (42.42--123.73)}
   \item{area}{test surface area in μm2 (5653--87838)}
   \item{pco}{percent cell occupancy of the test (9.94--100)}
-}}
+}
+}
 \usage{
 patellina
 }

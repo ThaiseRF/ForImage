@@ -4,7 +4,8 @@
 \name{nonionella}
 \alias{nonionella}
 \title{Nonionella size data}
-\format{A data frame with 208 rows and 7 variables:
+\format{
+A data frame with 208 rows and 7 variables:
 \describe{
   \item{species}{species of genus Nonionella from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -13,7 +14,8 @@
   \item{d_two}{test major diameter in  μm (82.99--547.67)}
   \item{area}{test surface area in μm2 (5783--222371)}
   \item{pco}{percent cell occupancy of the test (15.51--100)}
-}}
+}
+}
 \usage{
 nonionella
 }
