@@ -20,7 +20,7 @@
 #' @details For biomass estimates based on biovolume is usual the application of a cell density value, to retrieve the amount of organic carbon in the organism. The function made available distinct options of conversion factor which are based in several authors. These factors have been applied to a wide diversity of nano, micro, and macro-organisms, some applied to foraminifera and other nearby groups.
 #'  For more information, see \href{changelater}{Freitas et al.}
 #'
-#' @return An dataframe or numeric object, consisting of calculated biomass.
+#' @return An dataframe or numeric object, consisting of calculated biomass in μgC[org]/ind.
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #' @references
