@@ -14,7 +14,7 @@ sp <- read_csv("data-raw/spirillina.csv", col_types =
                       biomassa = "_")
 )
 
-se$prot <- se$prot/100
+sp$prot <- sp$prot/100
 
 spirillina <- rename(sp, c(ind = "ind",
                            altura  = "h",
