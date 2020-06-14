@@ -32,6 +32,30 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
                             ...) {
 
 
+    pack = c(
+        #"openssl",
+        "numpy",
+        "scipy",
+        "imutils",
+        "PIL",
+        "pandas",
+        "cv2")
+
+    #have_numpy <- py_module_available("numpy")
+    #have_scipy <- py_module_available("scipy")
+    #have_imutils <- py_module_available("imutils")
+    #have_pillow <- py_module_available("PIL")
+    #have_pandas <- py_module_available("pandas")
+    #have_opencv <- py_module_available("cv2")
+
+    for(module in pack) {
+        if(reticulate::py_module_available(module) == FALSE) {
+            warning('module: ', module, ' was not found in python path. ')
+        } else {
+            stop("\n All modules are already available in python path. \n\n")
+        }
+    }
+
 
     pack = c(
         #"openssl",
@@ -40,8 +64,9 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
         "imutils",
         "Pillow",
         "pandas",
-        "opencv"
-        )
+        "opencv")
+
+
 
     packages = c(pack, extra_packages)
 
