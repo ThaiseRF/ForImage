@@ -27,12 +27,12 @@ class Utilities:
 
     def optimize_image(self, filename, resize_width, rotate_angle, blur, x_scale):
         image = cv2.imread(filename)
-        scale_percent = 40  # percent of original size
-        width = int(image.shape[1] * scale_percent / 100)
-        height = int(image.shape[0] * scale_percent / 100)
-        dim = (width, height)
+        #scale_percent = 40  # percent of original size
+        #width = int(image.shape[1] * scale_percent / 100)
+        #height = int(image.shape[0] * scale_percent / 100)
+        #dim = (width, height)
         # resize image
-        image = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+        #image = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
         image = imutils.rotate(image, angle=rotate_angle)
         shifted = cv2.pyrMeanShiftFiltering(image, 31, 41)
         gray = cv2.cvtColor(shifted, cv2.COLOR_BGR2GRAY)
@@ -46,18 +46,18 @@ class Utilities:
 
         contour_list = []
         area = []
-        perimeter = []
+        #perimeter = []
         for contour in contours:
-            p = (cv2.arcLength(contour, True) / 2.5)
-            a = (cv2.contourArea(contour) * x_scale)
+            #p = (cv2.arcLength(contour, True) / 2.5)
+            a = (cv2.contourArea(contour) * (x_scale ** 2))
             if a > 1000:
                 contour_list.append(contour)
                 area.append(a)
-                perimeter.append(p)
+                #perimeter.append(p)
 
 
         cv2.drawContours(image, contour_list, -1, (0, 255, 0), 3)
-        return image, gray, perimeter, area, filename, contour_list
+        return image, gray, area, filename, contour_list
 
     def detect_edge(self, image, cannyMin, cannyMax):
         edged = cv2.Canny(image, cannyMin, cannyMax)
@@ -142,5 +142,5 @@ class Utilities:
         return dimA, dimB
 
     def pixelsPerMetric(self, x_scale):
-        scale = x_scale * 2.5
+        scale = x_scale 
         return scale

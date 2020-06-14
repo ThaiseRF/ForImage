@@ -10,7 +10,7 @@ class ComputerVision:
     def __init__(self):
         self.utils = utils()
 
-    def measure_object_dimension(self, image, xml_file, unit, resize_width=700, rotate_angle=0, blur=(1, 9), cannyMin=50, cannyMax=0, edge_iterations=1):
+    def measure_object_dimension(self, image, xml_file, unit, resize_width=0, rotate_angle=0, blur=(1, 9), cannyMin=50, cannyMax=0, edge_iterations=1):
         firstImage = 0
         utils = self.utils
 
@@ -19,7 +19,7 @@ class ComputerVision:
         scale = utils.pixelsPerMetric(x_scale)
 
         #load the image, convert it to grayscale, and blur it slightly - review
-        resized, blurred, perimeter, area, filename, contours = utils.optimize_image(image, resize_width, rotate_angle, blur, x_scale)
+        resized, blurred, area, filename, contours = utils.optimize_image(image, resize_width, rotate_angle, blur, x_scale)
 
         # step I.2: perform edge detection, then perform a dilation + erotion to close gaps in between object edges
         edge = utils.detect_edge(blurred, cannyMin, cannyMax)
@@ -54,7 +54,7 @@ class ComputerVision:
                 name = os.path.splitext(filename)[0] + ".png"
                 cv2.imwrite(name, resized)
                 
-                data.append({'diamA': diamA, 'diamB': diamB, 'area': area[idx], 'perimeter': perimeter[idx], 'filename': filename})
+                data.append({'diamA': diamA, 'diamB': diamB, 'area': area[idx], 'filename': filename})
 
 
         df = pd.DataFrame(data)
