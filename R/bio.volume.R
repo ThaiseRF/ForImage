@@ -6,7 +6,7 @@
 #' @param data a numeric vector or data frame with size data. Size data parameters by model see.
 #' @param genus foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pco}}
 #' @param pco (optional) percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.
-#' @param ... other arguments.
+#' @param ... other arguments inherited from \code{\link{volume.total}}.
 #' @details The function calculates the biovolume of different individuals from the available genera. The geometric models are applied automatically based on adaptation performed by.
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
@@ -22,21 +22,25 @@
 #' dat
 #' @export
 
-bio.volume <- function(data, pco = 0.76, genus = NULL, ...){
+bio.volume <- function(data, pco = 0.76, genus = NULL, model = NULL, ...){
 
   x <- data.frame(data)
 
-  if (!is.character(genus) && !("genus" %in% colnames(x))) {
-    stop("Genus not specified")
-  }
 
   if ("genus" %in% colnames(x)) {
     genus <- x$genus
   }
 
-  if ("pco" %in% colnames(x) && !missing(genus)) {
+  if ("model" %in% colnames(x) && missing(genus)) {
+    model <- x$model
+  }
 
-    pco <- x$pco
+  if (missing(genus) && missing(model)) {
+    stop("Please inform genus or model to be applied.")
+
+  }
+
+  if (missing(model) && !missing(genus)){
 
     d_pco <- forImage::data_pco
 
@@ -44,6 +48,18 @@ bio.volume <- function(data, pco = 0.76, genus = NULL, ...){
 
       x$model <- (d_pco[match(genus, d_pco$genera), ]$model)
     }
+
+  }
+
+
+  if ("pco" %in% colnames(x) && !missing(genus)) {
+    pco <- x$pco
+
+  }
+
+  if ("pco" %in% colnames(x) && missing(genus)) {
+    pco <- x$pco
+
   }
 
   if (!("pco" %in% colnames(x)) && !missing(genus)) {
@@ -54,14 +70,12 @@ bio.volume <- function(data, pco = 0.76, genus = NULL, ...){
 
       pco <- (d_pco[match(genus, d_pco$genera), ]$mean)/100
 
-      x$model <- (d_pco[match(genus, d_pco$genera), ]$model)
-
-    } else {
-      stop("Genus not available in database.")
     }
   }
 
-  v <- forImage::volume.total(x)$vol
+
+
+  v <- forImage::volume.total(x, model = model)$vol
   bv <- v * pco
   result <- x %>%
     tibble::as_tibble(.) %>%
