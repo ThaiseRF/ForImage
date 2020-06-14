@@ -54,20 +54,25 @@
 #' @export volume.total
 #' @rdname volume
 
-volume.total <- function(data, model = NULL, ...) {
+volume.total <- function(data, model, ...) {
 
   x <- data.frame(data)
 
-  if (!is.character(model) && !("model" %in% colnames(x))) {
-    stop("Geometric model not specified")
-
-    if(!any(model == c("1hl", "2sl", "3hl", "4hl", "5hl",
-                       "6fs", "7fs","8hl", "10hl", "11fs",
-                       "12v", "13hlsl", "14hl", "15hl", "17fs", "axh"))) {
-      stop("Unknown 'model' argument specified")
-    }
-
+  if ("model" %in% colnames(x)) {
+    model <- x$model
   }
+
+
+  MODELS <- c("1hl", "2sl", "3hl", "4hl", "5hl",
+             "6fs", "7fs","8hl", "10hl", "11fs",
+             "12v", "13hlsl", "14hl", "15hl", "17fs", "axh")
+
+
+  if (!is.null(model) && !pmatch(model, MODELS, nomatch = F, duplicates.ok = T))
+    stop(gettextf("geometric model %s is invalid", model))
+
+
+  model <- match.arg(model, MODELS, several.ok = T)
 
 
   x <- x %>%

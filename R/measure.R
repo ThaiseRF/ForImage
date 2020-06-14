@@ -4,7 +4,7 @@
 #' The function identifies forams in photomicrographs and measure the individuals dimensions.
 #' See details \sQuote{Details}:
 #'
-#' @usage measure(filePath, ...)
+#' @usage measure(filePath)
 #' @param filePath path containing the photomicrographs along with their metadata.
 #' @param ... other arguments.
 #'
