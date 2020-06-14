@@ -3,13 +3,9 @@ test_that("incorrect model call", {
     x <- data.frame(h = 10, d_one = 10, d_two = 10,
                     area = 10, width = 10, length = 10)
 
-    expect_error(volume.total(x),
-                 "Geometric model not specified",
-                 fixed = TRUE)
-
 
     expect_error(volume.total(x, model = "1x"),
-                 "Unknown 'model' argument specified",
+                 "geometric model 1x is invalid",
                  fixed = TRUE)
 })
 
