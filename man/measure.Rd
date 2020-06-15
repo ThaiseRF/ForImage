@@ -4,12 +4,10 @@
 \alias{measure}
 \title{Foraminifera image measurement}
 \usage{
-measure(filePath, ...)
+measure(filePath)
 }
 \arguments{
 \item{filePath}{path containing the photomicrographs along with their metadata.}
-
-\item{...}{other arguments.}
 }
 \value{
 An dataframe consisting of:

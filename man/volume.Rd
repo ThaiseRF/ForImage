@@ -4,7 +4,7 @@
 \alias{volume.total}
 \title{Volumetric calculus of organisms}
 \usage{
-\method{volume}{total}(data, model = NULL, ...)
+\method{volume}{total}(data, model, ...)
 }
 \arguments{
 \item{data}{data frame containing size data. Size data parameters by model see.}
