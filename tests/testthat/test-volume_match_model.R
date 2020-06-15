@@ -4,10 +4,9 @@ test_that("incorrect model call", {
                     area = 10, width = 10, length = 10)
 
 
-    expect_error(volume.total(x, model = "1x"),
-                 "geometric model 1x is invalid",
-                 fixed = TRUE)
+    expect_error(volume.total(x, model = "1x"))
 })
+
 
 test_that("find model argument in column dataframe", {
 
