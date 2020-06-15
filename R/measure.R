@@ -1,12 +1,12 @@
 #' Foraminifera image measurement
 #'
 #' @description
-#' The function identifies forams in photomicrographs and measure the individuals dimensions.
+#' This function measures dimensions in photomicrographs.
 #' See details \sQuote{Details}:
 #'
-#' @usage measure(filePath)
-#' @param filePath path containing the photomicrographs along with their metadata.
-#' @param ... other arguments.
+#' @usage measure(file, pco = FALSE)
+#' @param file image file with or without metadata.
+#' @param pco (optional) will assess proportion of cell occupancy inside the shell. Outlined proportion.
 #'
 #' @return An dataframe consisting of:
 #'
@@ -17,30 +17,44 @@
 #' @export
 #' @examples 2
 
-measure <- function(filePath, ...) {
+measure <- function(file, pco = FALSE) {
 
   python_path <- system.file("python", package = "forImage")
 
   utilities <- reticulate::import_from_path("cv_utilities", path = python_path)
   measure_dim <- reticulate::import_from_path("measure_dim", path = python_path)
 
-
   os <- reticulate::import("os")
   utils <- utilities$Utilities()
   cv <- measure_dim$ComputerVision()
 
+  #image_name <- sub('\\.tiff$', '', file)
+  #meta_name <- sub('\\.tif_meta.xml$', '', xml_file)
 
-  files <- list.files(pattern = c('\\.tif$','\\.tiff$', '\\.jpg$'))
-  xml <- list.files(pattern = c('\\.xml$'))
+  ##DEPOIS inserir opção de escala daqui
 
-  data  <- lapply(files, function(x) {
-    image_name = os$path$splitext(x)[[1]]
-    i <- paste(image_name, "tif_meta.xml", sep = ".", collapse = "")
-    p <- utils$get_pixels(xml_file = i)
-    d <- cv$measure_object_dimension(x, xml_file = i, unit = 'um')
-  })
+  xml_file <- os$path$splitext(file)[[1]]
+  xml_file <- paste(xml_file, "tif_meta.xml", sep = ".", collapse = "")
 
-  df <- data.table::rbindlist(data)
+  gp <- utils$get_pixels(xml_file = xml_file)
+  #print(gp)
+
+  dim <- cv$measure_object_dimension(file, xml_file = xml_file, unit = 'um')
+
+  if(isTRUE(pco)){
+    protoplasm <- reticulate::import_from_path("protoplasm", path = python_path)
+
+    prot <- protoplasm$Protoplasm()
+
+    p <- prot$measure(file = file, x_scale = gp)
+
+    df <- dplyr::bind_cols(dim, p)
+  } else {
+
+    df <- data.frame(dim)
+
+  }
+
 
   return(df)
 
