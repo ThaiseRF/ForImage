@@ -4,16 +4,16 @@
 \alias{bio.volume}
 \title{Biovolume calculus}
 \usage{
-bio.volume(data, pco = 0.76, genus = NULL, ...)
+bio.volume(data, pco = 0.76, genus = NULL, model = NULL)
 }
 \arguments{
 \item{data}{a numeric vector or data frame with size data. Size data parameters by model see.}
 
-\item{pco}{(optional) percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.}
+\item{pco}{(optional) vector informing percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.}
 
-\item{genus}{foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pco}}}
+\item{genus}{(optional) character informing foraminifera genus to calculate individual biovolume. See all genera available in \code{\link{data_pco}}}
 
-\item{...}{other arguments.}
+\item{model}{(optional if genus unknown) character informing geometric model to calculate volume. See all models available in \code{\link{volume.total}}}
 }
 \description{
 This function calculates foraminifera biovolume, through geometric approximation. To compute others organisms cell volume use \code{\link{volume.total}} function
@@ -23,9 +23,15 @@ The function calculates the biovolume of different individuals from the availabl
 }
 \examples{
 # Calculate biovolume for different genera
-data(ammonia)
-dat <- bio.volume(ammonia, genus= "ammonia")
-dat
+#Ammonia size data
+data("ammonia")
+
+bio.volume(ammonia, genus= "ammonia")
+
+# Calculate biovolume for unknown genus
+df <- data.frame(h = 10, d_one = 10, d_two = 10, area = 10, width = 10, length = 10)
+bio.volume(df, model = "10hl", pco = 0.76)
+
 }
 \seealso{
 \code{\link{volume.total}}

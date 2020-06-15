@@ -4,9 +4,9 @@
 #' This function calculates foraminifera biovolume, through geometric approximation. To compute others organisms cell volume use \code{\link{volume.total}} function
 #'
 #' @param data a numeric vector or data frame with size data. Size data parameters by model see.
-#' @param genus foraminifera genus to calculate individual biovolume. See all genera in \code{\link{data_pco}}
-#' @param pco (optional) percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.
-#' @param ... other arguments inherited from \code{\link{volume.total}}.
+#' @param genus (optional) character informing foraminifera genus to calculate individual biovolume. See all genera available in \code{\link{data_pco}}
+#' @param pco (optional) vector informing percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.
+#' @param model (optional if genus unknown) character informing geometric model to calculate volume. See all models available in \code{\link{volume.total}}
 #' @details The function calculates the biovolume of different individuals from the available genera. The geometric models are applied automatically based on adaptation performed by.
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
@@ -17,12 +17,18 @@
 #' @importFrom magrittr %>%
 #' @examples
 #' # Calculate biovolume for different genera
-#' data(ammonia)
-#' dat <- bio.volume(ammonia, genus= "ammonia")
-#' dat
+#' #Ammonia size data
+#' data("ammonia")
+#'
+#' bio.volume(ammonia, genus= "ammonia")
+#'
+#' # Calculate biovolume for unknown genus
+#' df <- data.frame(h = 10, d_one = 10, d_two = 10, area = 10, width = 10, length = 10)
+#' bio.volume(df, model = "10hl", pco = 0.76)
+#'
 #' @export
 
-bio.volume <- function(data, pco = 0.76, genus = NULL, model = NULL, ...){
+bio.volume <- function(data, pco = 0.76, genus = NULL, model = NULL){
 
   x <- data.frame(data)
 
