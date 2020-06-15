@@ -68,10 +68,6 @@ volume.total <- function(data, model, ...) {
              "12v", "13hlsl", "14hl", "15hl", "17fs", "axh")
 
 
-  if (!is.null(model) && !pmatch(model, MODELS, nomatch = F, duplicates.ok = T))
-    stop(gettextf("geometric model %s is invalid", model))
-
-
   model <- match.arg(model, MODELS, several.ok = T)
 
 
