@@ -4,8 +4,10 @@
 #' This function measures dimensions in photomicrographs.
 #' See details \sQuote{Details}:
 #'
-#' @usage measure(file, pco = FALSE)
+#' @usage measure(file, scale = NULL, ref_scale = NULL, pco = FALSE)
 #' @param file image file with or without metadata.
+#' @param scale (optional) image physical pixel size (metric / pixel).
+#' @param ref_scale (optional) reference scale available on image (in micrometers or millimeters). This scale should be inserted under the main object.
 #' @param pco (optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is s  till being tested and should be used with caution.
 #'
 #' @return An dataframe consisting of:
@@ -17,7 +19,7 @@
 #' @export
 #' @examples 2
 
-measure <- function(file, pco = FALSE, scale = NULL, ref_scale = NULL) {
+measure <- function(file, scale = NULL, ref_scale = NULL, pco = FALSE) {
 
   ##set python path and initiate modules
 
@@ -40,7 +42,7 @@ measure <- function(file, pco = FALSE, scale = NULL, ref_scale = NULL) {
   ## Pixel per metric through scale in image
 
   if(!missing(ref_scale)) {
-    reference_scale <- ref_scale
+    ref_scale <- ref_scale
   }
 
 
@@ -68,7 +70,9 @@ measure <- function(file, pco = FALSE, scale = NULL, ref_scale = NULL) {
 
     prot <- protoplasm$Protoplasm()
 
-    p <- prot$measure(file = file, x_scale = gp)
+    sc <- dim$scale
+
+    p <- prot$measure(file = file, scale = sc)
 
     df <- dplyr::bind_cols(dim, p)
   } else {
