@@ -8,7 +8,7 @@ class Protoplasm:
     def __init__(self):
         pass
 
-    def measure(self, file, x_scale, rotate_angle = 0):
+    def measure(self, file, scale, rotate_angle = 0):
         image = cv2.imread(file)
         #scale_percent = 40  # percent of original size
         #width = int(image.shape[1] * scale_percent / 100)
@@ -39,7 +39,7 @@ class Protoplasm:
 
         area = 0
         for c in cnts:
-            area += (cv2.contourArea(c) * (x_scale ** 2))
+            area += (cv2.contourArea(c) * (scale ** 2))
             #area += (cv2.contourArea(c) * 0.1511111111111111)
             cv2.drawContours(original,[c], 0, (0,0,255), 2)
 
