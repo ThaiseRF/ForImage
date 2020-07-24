@@ -6,7 +6,7 @@
 #'
 #' @usage measure(file, pco = FALSE)
 #' @param file image file with or without metadata.
-#' @param pco (optional) will assess proportion of cell occupancy inside the shell. Outlined proportion.
+#' @param pco (optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is s  till being tested and should be used with caution.
 #'
 #' @return An dataframe consisting of:
 #'
@@ -17,7 +17,9 @@
 #' @export
 #' @examples 2
 
-measure <- function(file, pco = FALSE) {
+measure <- function(file, pco = FALSE, scale = NULL, ref_scale = NULL) {
+
+  ##set python path and initiate modules
 
   python_path <- system.file("python", package = "forImage")
 
@@ -28,18 +30,38 @@ measure <- function(file, pco = FALSE) {
   utils <- utilities$Utilities()
   cv <- measure_dim$ComputerVision()
 
-  #image_name <- sub('\\.tiff$', '', file)
-  #meta_name <- sub('\\.tif_meta.xml$', '', xml_file)
 
-  ##DEPOIS inserir opção de escala daqui
+  ## Pixel per metric - manual
 
-  xml_file <- os$path$splitext(file)[[1]]
-  xml_file <- paste(xml_file, "tif_meta.xml", sep = ".", collapse = "")
+  if(!missing(scale)) {
+    scale <- scale
+  }
 
-  gp <- utils$get_pixels(xml_file = xml_file)
-  #print(gp)
+  ## Pixel per metric through scale in image
 
-  dim <- cv$measure_object_dimension(file, xml_file = xml_file, unit = 'um')
+  if(!missing(ref_scale)) {
+    reference_scale <- ref_scale
+  }
+
+
+  ## Pixel per metric through meta_file
+
+  if(missing(scale) && missing(ref_scale)){
+
+    ppm <- reticulate::import_from_path("ppm", path = python_path)
+
+    px <- ppm$Pixels()
+
+    xml_file <- os$path$splitext(file)[[1]]
+    xml_file <- paste(xml_file, "tif_meta.xml", sep = ".", collapse = "")
+
+    scale <- px$get_pixels_axio(xml_file = xml_file)
+
+  }
+
+
+
+  dim <- cv$measure_object_dimension(file, scale = scale, reference_scale = ref_scale)
 
   if(isTRUE(pco)){
     protoplasm <- reticulate::import_from_path("protoplasm", path = python_path)

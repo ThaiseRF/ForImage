@@ -10,16 +10,13 @@ class ComputerVision:
     def __init__(self):
         self.utils = utils()
 
-    def measure_object_dimension(self, image, xml_file, unit, resize_width=0, rotate_angle=0, blur=(1, 9), cannyMin=50, cannyMax=0, edge_iterations=1):
+    def measure_object_dimension(self, image, scale = None, reference_scale = None, unit = 'um', resize_width=0, rotate_angle=0, blur=(1, 9), cannyMin=50, cannyMax=0, edge_iterations=1):
         firstImage = 0
         utils = self.utils
 
-        #get scale factor in image metafile
-        x_scale = utils.get_pixels(xml_file)
-        scale = utils.pixelsPerMetric(x_scale)
 
         #load the image, convert it to grayscale, and blur it slightly - review
-        resized, blurred, area, filename, contours = utils.optimize_image(image, resize_width, rotate_angle, blur, x_scale)
+        resized, blurred, area, filename, contours = utils.optimize_image(image, resize_width, rotate_angle, blur)
 
         # step I.2: perform edge detection, then perform a dilation + erotion to close gaps in between object edges
         edge = utils.detect_edge(blurred, cannyMin, cannyMax)
@@ -46,15 +43,18 @@ class ComputerVision:
                 tltrX, tltrY, blbrX, blbrY, tlblX, tlblY, trbrX, trbrY)
 
             # step II.5: perform the calibration pixel to millimeters if the pixels per metric has not been initialized
-            #if pixelsPerMetric is None: pixelsPerMetric = dB / coin_diameter
+            if scale is None: scale = reference_scale / dB # metric / pixel
             
             if dA * scale > 50 and dB * scale > 50:
                 diamA, diamB = utils.get_dimensions(dA, dB, scale, resized, unit, tltrX, tltrY, trbrX, trbrY)
 
-                name = os.path.splitext(filename)[0] + ".png"
+                file = os.path.splitext(filename)[0]
+                name = file + ".png"
                 cv2.imwrite(name, resized)
+
+                area = (area[idx] * (scale ** 2))
                 
-                data.append({'diamA': diamA, 'diamB': diamB, 'area': area[idx], 'filename': filename})
+                data.append({'diamA': diamA, 'diamB': diamB, 'area': area, 'filename': file})
 
 
         df = pd.DataFrame(data)

@@ -9,23 +9,7 @@ class Utilities:
     def __init__(self):
         pass
 
-    def get_pixels(self, xml_file):
-        import os
-        import xml.etree.ElementTree as ET
-        tree = ET.parse(xml_file)
-        root = tree.getroot()
-        for child in root.findall('.//Scaling'):
-            x_scale = float((child[3].text).replace(',', '.'))
-            y_scale = float((child[8].text).replace(',', '.'))
-            if x_scale != y_scale:
-                print("X and Y coordinates are not equal. Check xml file")
-                break
-            else:
-                name = os.path.splitext(xml_file)[0]
-                name = os.path.splitext(name)[0]
-                return x_scale
-
-    def optimize_image(self, filename, resize_width, rotate_angle, blur, x_scale):
+    def optimize_image(self, filename, resize_width, rotate_angle, blur):
         image = cv2.imread(filename)
         #scale_percent = 40  # percent of original size
         #width = int(image.shape[1] * scale_percent / 100)
@@ -49,8 +33,8 @@ class Utilities:
         #perimeter = []
         for contour in contours:
             #p = (cv2.arcLength(contour, True) / 2.5)
-            a = (cv2.contourArea(contour) * (x_scale ** 2))
-            if a > 1000:
+            a = (cv2.contourArea(contour))
+            if a > 5000:
                 contour_list.append(contour)
                 area.append(a)
                 #perimeter.append(p)
@@ -131,9 +115,9 @@ class Utilities:
         dB = dist.euclidean((tlblX, tlblY), (trbrX, trbrY))
         return dA, dB
 
-    def get_dimensions(self, dA, dB, ratio, image, unit, tltrX, tltrY, trbrX, trbrY):
-        dimA = dA * ratio
-        dimB = dB * ratio
+    def get_dimensions(self, dA, dB, scale, image, unit, tltrX, tltrY, trbrX, trbrY):
+        dimA = dA * scale
+        dimB = dB * scale
         # draw the dimensions on the image
         cv2.putText(image, "{:.1f}{}".format(dimA, unit), (int(tltrX - 15), int(tltrY - 10)),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
@@ -141,6 +125,3 @@ class Utilities:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         return dimA, dimB
 
-    def pixelsPerMetric(self, x_scale):
-        scale = x_scale 
-        return scale
