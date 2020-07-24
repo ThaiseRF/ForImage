@@ -28,8 +28,7 @@
 #' @export
 
 install_measure <- function(method = "auto", conda = "auto", envname = NULL,
-                            extra_packages = NULL, pip = F,
-                            ...) {
+                            extra_packages = NULL, pip = F) {
 
 
     pack = c(
@@ -57,7 +56,7 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
     }
 
 
-    pack = c(
+    package = c(
         #"openssl",
         "numpy",
         "scipy",
@@ -68,16 +67,16 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
 
 
 
-    packages = c(pack, extra_packages)
+    packages = c(package, extra_packages)
 
+    reticulate::conda_list(conda = conda)
 
     reticulate::py_install(
         packages       = packages,
         envname        = envname,
         method         = method,
         conda          = conda,
-        pip            = pip,
-        ...
+        pip            = pip
     )
 
     cat("\n Installation complete. Please restart R.\n\n")

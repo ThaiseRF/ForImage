@@ -9,8 +9,7 @@ install_measure(
   conda = "auto",
   envname = NULL,
   extra_packages = NULL,
-  pip = F,
-  ...
+  pip = F
 )
 }
 \arguments{
@@ -26,8 +25,6 @@ available on Windows.}
 \item{extra_packages}{Additional packages if needed.}
 
 \item{pip}{Install from pip, if possible.}
-
-\item{...}{Optional arguments, reserved for future expansion.}
 }
 \description{
 The function is a wrapper to install all python packages dependencies for \code{measure} function at once.
