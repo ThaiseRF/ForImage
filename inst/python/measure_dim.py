@@ -54,7 +54,7 @@ class ComputerVision:
 
                 area = (area[idx] * (scale ** 2))
                 
-                data.append({'diamA': diamA, 'diamB': diamB, 'area': area, 'filename': file})
+                data.append({'diamA': diamA, 'diamB': diamB, 'area': area, 'scale': scale, 'filename': file})
 
 
         df = pd.DataFrame(data)
