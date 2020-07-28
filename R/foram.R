@@ -15,7 +15,7 @@
 #'
 #' @details foraminifera genera with \code{(pco)} available:
 #' \tabular{rlll}{
-#'  \tab"ammonia"\tab"amphis"\tab"angulogerina"\cr
+#'  \tab"ammonia"\tab"amphistegina"\tab"angulogerina"\cr
 #'  \tab"archaias"\tab"asterotrochammina"\tab"bolivina"\cr
 #'  \tab"buliminella"\tab"cancris"\tab"caronia"\cr
 #'  \tab"cassidulina"\tab"cibicides"\tab"cibicidoides"\cr
@@ -44,10 +44,10 @@
 #' @name data_pco
 NULL
 
-#' Foraminifeal photomicrographs for \code{forImage} examples
+#' Foraminiferal photomicrograph for \code{forImage} examples
 #'
 #'
-#' This dataset contains image files of several foraminiferal genera.
+#' Contains image file of one foraminifer.
 #' These files are originally from previous work - Freitas et al. (2019)
 #'
 #' @docType data
