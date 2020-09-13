@@ -10,7 +10,7 @@
 #' @param ref_scale (optional) reference scale available on image (in micrometers or millimeters). This scale should be inserted under the main object.
 #' @param pco (optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is still being tested and should be used with caution.
 #'
-#' @return An dataframe consisting of:
+#' @return A dataframe
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #'
