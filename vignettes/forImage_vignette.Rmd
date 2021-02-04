@@ -17,7 +17,6 @@ If you work with fossil or recent foraminifera and eventually had to measure spe
 `forImage` is a package developed to facilitate foraminiferal biomass estimate assessment. 
 
 
-
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
