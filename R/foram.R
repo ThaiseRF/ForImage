@@ -1,7 +1,7 @@
-#' Foraminifeal genera data for \code{forImage} examples
+#' Foraminiferal genera data for \code{forImage} examples
 #'
-#' This dataset contains protoplasm occupancy mean and standart deviation data of 72 foraminifera genera.
-#' These genera data are originally from previous work - Freitas et al. (2019)
+#' This dataset contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
+#' These genera data are originally from Freitas et al. (2019)
 #' @docType data
 #' @keywords dataset
 #' @format A data frame with 72 rows and 3 variables:
@@ -13,7 +13,7 @@
 #'   \item{model}{fitted geometric model in Freitas et al. (2019)}
 #' }
 #'
-#' @details foraminifera genera with \code{(pco)} available:
+#' @details Foraminifera genera with \code{(pco)} available:
 #' \tabular{rlll}{
 #'  \tab"ammonia"\tab"amphistegina"\tab"angulogerina"\cr
 #'  \tab"archaias"\tab"asterotrochammina"\tab"bolivina"\cr
@@ -57,9 +57,9 @@ NULL
 #' @name exampleImage
 NULL
 
-#' Ammonia size data
+#' \emph{Ammonia} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Ammonia.
+#' A dataset containing the size and other attributes of species from genus \emph{Ammonia}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 867 rows and 7 variables:
@@ -74,9 +74,9 @@ NULL
 #' }
 "ammonia"
 
-#' Amphistegina size data
+#' \emph{Amphistegina} size data
 #'
-#' A dataset containing the size and other attributes of genus Amphistegina
+#' A dataset containing the size and other attributes of genus \emph{Amphistegina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 167 rows and 5 variables:
@@ -89,9 +89,9 @@ NULL
 #' }
 "amphistegina"
 
-#' Angulogerina size data
+#' \emph{Angulogerina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Angulogerina.
+#' A dataset containing the size and other attributes of species from genus \emph{Angulogerina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 100 rows and 6 variables:
@@ -105,9 +105,9 @@ NULL
 #' }
 "angulogerina"
 
-#' Asterotrochammina size data
+#' \emph{Asterotrochammina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Asterotrochammina.
+#' A dataset containing the size and other attributes of species from genus \emph{Asterotrochammina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 335 rows and 7 variables:
@@ -122,9 +122,9 @@ NULL
 #' }
 "asterotrochammina"
 
-#' Bolivina size data
+#' \emph{Bolivina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Bolivina.
+#' A dataset containing the size and other attributes of species from genus \emph{Bolivina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 628 rows and 7 variables:
@@ -139,9 +139,9 @@ NULL
 #' }
 "bolivina"
 
-#' Cibicidoides size data
+#' \emph{Cibicidoides} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Cibicidoides.
+#' A dataset containing the size and other attributes of species from genus \emph{Cibicidoides}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 118 rows and 7 variables:
@@ -156,9 +156,9 @@ NULL
 #' }
 "cibicidoides"
 
-#' Discorbinella size data
+#' \emph{Discorbinella} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Discorbinella.
+#' A dataset containing the size and other attributes of species from genus \emph{Discorbinella}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 318 rows and 7 variables:
@@ -173,9 +173,9 @@ NULL
 #' }
 "discorbinella"
 
-#' Laevipeneroplis size data
+#' \emph{Laevipeneroplis} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Laevipeneroplis.
+#' A dataset containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 79 rows and 7 variables:
@@ -190,9 +190,9 @@ NULL
 #' }
 "laevipeneroplis"
 
-#' Loxostomina size data
+#' \emph{Loxostomina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Loxostomina.
+#' A dataset containing the size and other attributes of species from genus \emph{Loxostomina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 31 rows and 7 variables:
@@ -206,9 +206,9 @@ NULL
 #' }
 "loxostomina"
 
-#' Nonionella size data
+#' \emph{Nonionella} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Nonionella.
+#' A dataset containing the size and other attributes of species from genus \emph{Nonionella}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 208 rows and 7 variables:
@@ -223,9 +223,9 @@ NULL
 #' }
 "nonionella"
 
-#' Patellina size data
+#' \emph{Patellina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Patellina.
+#' A dataset containing the size and other attributes of species from genus \emph{Patellina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 79 rows and 6 variables:
@@ -239,9 +239,9 @@ NULL
 #' }
 "patellina"
 
-#' Quinqueloculina size data
+#' \emph{Quinqueloculina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Quinqueloculina. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
+#' A dataset containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 688 rows and 10 variables:
@@ -260,9 +260,9 @@ NULL
 "quinqueloculina"
 
 
-#' Rectocibicides size data
+#' \emph{Rectocibicides} size data
 #'
-#' A dataset containing the size and other attributes of genus Rectocibicides
+#' A dataset containing the size and other attributes of genus \emph{Rectocibicides}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 199 rows and 4 variables:
@@ -275,9 +275,9 @@ NULL
 #' }
 "rectocibicides"
 
-#' Spirillina size data
+#' \emph{Spirillina} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Spirillina
+#' A dataset containing the size and other attributes of species from genus \emph{Spirillina}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 42 rows and 6 variables:
@@ -291,9 +291,9 @@ NULL
 #' }
 "spirillina"
 
-#' Textularia size data
+#' \emph{Textularia} size data
 #'
-#' A dataset containing the size and other attributes of species from genus Textularia
+#' A dataset containing the size and other attributes of species from genus \emph{Textularia}.
 #'  The variables are as follows:
 #'
 #' @format A data frame with 84 rows and 7 variables:

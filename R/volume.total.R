@@ -3,7 +3,7 @@
 #' @description The function calculates organisms volume based on geometric approximation.
 #'
 #'
-#' @param data data frame containing size data. Size data parameters by model see.
+#' @param data data frame containing size data. Size data parameters may vary according to chosen model, see Details.
 #' @param model character informing geometric model to calculate volume, the models options are listed below:
 #' \itemize{
 #'   \item \code{'1hl'} : sphere
@@ -20,12 +20,57 @@
 #'   \item \code{'14hl'} : prism on elliptic base/elliptic cylinder
 #'   \item \code{'15hl'} : half elliptic prism
 #'   \item \code{'17fs'} : triangular dypyramid
-#'   \item \code{'ahx'} : area x heigth
+#'   \item \code{'ahx'} : area x height
 #'
 #' }
-#' @param ... other arguments.
-#' @details These geometric models applied in this function are based in the selection made by Freitas et al. Which were mainly based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}. Some other formulas were adapted \code{('.fs')} to better calculate the test volume of benthic foraminifera.
-#'  For more information, see \href{Freitas et al. (2019)}{Freitas et al. (2019)}
+#' @details These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}.
+#' \tabular{ll}{
+#'   \code{'1hl'}
+#'   \tab \eqn{V = (pi * (d_one^3))/6}
+#'   \cr
+#'   \code{'2sl'}
+#'   \tab \eqn{V = (pi * (d_one^3))/12}
+#'   \cr
+#'   \code{'3hl'}
+#'   \tab \eqn{V = (pi * h * (d_one^2))/6}
+#'   \cr
+#'   \code{'4hl'}
+#'   \tab \eqn{V = (pi * h * (d_one^2))/12}
+#'   \cr
+#'   \code{'6fs'}
+#'   \tab \eqn{V = (pi * hx * (d_one^2))/8}
+#'   \cr
+#'   \tab where \eqn{hx} is a function of test height for trochamminids.
+#'   \code{'7fs'}
+#'   \tab \eqn{V = (pi * h * (4 * (h^2) + 3 * (d_one^2)))/24}
+#'   \cr
+#'   \code{'8hl'}
+#'   \tab \eqn{V = (pi * h * (d_one^2))/4}
+#'   \cr
+#'   \code{'10hl'}
+#'   \tab \eqn{V = (pi * h * d_one * d_two)/6}
+#'   \cr
+#'   \code{'11fs'}
+#'   \tab \eqn{V = (pi * h * d_one * d_two)/12}
+#'   \cr
+#'   \code{'12v'}
+#'   \tab \eqn{V = (pi * h * d_one * d_two)/12}
+#'   \cr
+#'   \code{'13hlsl'}
+#'   \tab \eqn{V = ((d_one * d_two)/4) * (d_one + ((pi/4) - 1) * d_two) * asin(h/(2*d_one))}
+#'   \cr
+#'   \code{'14hl'}
+#'   \tab \eqn{V = (pi * h * d_one * d_two)/4}
+#'   \cr
+#'   \code{'15hl'}
+#'   \tab \eqn{V = pi * h * d_one * d_two)/4}
+#'   \cr
+#'   \code{'17fs'}
+#'   \tab \eqn{V = ((length * width)/2) * h)/3}
+#'   \cr
+#'   where \eqn{d_one} is minor diameter, \eqn{d_two} is major diameter and \eqn{h} is height.
+#' }
+#' The size data parameters should follow the specified measures determined by each model. Which can be a variable in the dataframe if specified as \code{model}.
 #'
 #' @return A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
@@ -46,10 +91,6 @@
 #' #calculate test volume
 #' volume.total(ammonia, model = "10hl")
 #'
-#'
-#' #with model argument in column (for more than 1 model)
-#' am <- dplyr::mutate(ammonia, model = "10hl")
-#' volume.total(am)
 #'
 #' @export volume.total
 #' @rdname volume

@@ -3,7 +3,7 @@
 \docType{data}
 \name{asterotrochammina}
 \alias{asterotrochammina}
-\title{Asterotrochammina size data}
+\title{\emph{Asterotrochammina} size data}
 \format{
 A data frame with 335 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 335 rows and 7 variables:
 asterotrochammina
 }
 \description{
-A dataset containing the size and other attributes of species from genus Asterotrochammina.
+A dataset containing the size and other attributes of species from genus \emph{Asterotrochammina}.
  The variables are as follows:
 }
 \keyword{datasets}

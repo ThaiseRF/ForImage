@@ -3,7 +3,7 @@
 \docType{data}
 \name{angulogerina}
 \alias{angulogerina}
-\title{Angulogerina size data}
+\title{\emph{Angulogerina} size data}
 \format{
 A data frame with 100 rows and 6 variables:
 \describe{
@@ -19,7 +19,7 @@ A data frame with 100 rows and 6 variables:
 angulogerina
 }
 \description{
-A dataset containing the size and other attributes of species from genus Angulogerina.
+A dataset containing the size and other attributes of species from genus \emph{Angulogerina}.
  The variables are as follows:
 }
 \keyword{datasets}

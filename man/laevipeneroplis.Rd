@@ -3,7 +3,7 @@
 \docType{data}
 \name{laevipeneroplis}
 \alias{laevipeneroplis}
-\title{Laevipeneroplis size data}
+\title{\emph{Laevipeneroplis} size data}
 \format{
 A data frame with 79 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 79 rows and 7 variables:
 laevipeneroplis
 }
 \description{
-A dataset containing the size and other attributes of species from genus Laevipeneroplis.
+A dataset containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
  The variables are as follows:
 }
 \keyword{datasets}

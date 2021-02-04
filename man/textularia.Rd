@@ -3,7 +3,7 @@
 \docType{data}
 \name{textularia}
 \alias{textularia}
-\title{Textularia size data}
+\title{\emph{Textularia} size data}
 \format{
 A data frame with 84 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 84 rows and 7 variables:
 textularia
 }
 \description{
-A dataset containing the size and other attributes of species from genus Textularia
+A dataset containing the size and other attributes of species from genus \emph{Textularia}.
  The variables are as follows:
 }
 \keyword{datasets}

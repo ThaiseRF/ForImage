@@ -3,7 +3,7 @@
 \docType{data}
 \name{quinqueloculina}
 \alias{quinqueloculina}
-\title{Quinqueloculina size data}
+\title{\emph{Quinqueloculina} size data}
 \format{
 A data frame with 688 rows and 10 variables:
 \describe{
@@ -23,7 +23,7 @@ A data frame with 688 rows and 10 variables:
 quinqueloculina
 }
 \description{
-A dataset containing the size and other attributes of species from genus Quinqueloculina. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
+A dataset containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
  The variables are as follows:
 }
 \keyword{datasets}

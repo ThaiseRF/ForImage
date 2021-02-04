@@ -13,10 +13,10 @@ measure(file, scale = NULL, ref_scale = NULL, pco = FALSE)
 
 \item{ref_scale}{(optional) reference scale available on image (in micrometers or millimeters). This scale should be inserted under the main object.}
 
-\item{pco}{(optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is s  till being tested and should be used with caution.}
+\item{pco}{(optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is still being tested and should be used with caution.}
 }
 \value{
-An dataframe consisting of:
+A dataframe
 }
 \description{
 This function measures dimensions in photomicrographs.

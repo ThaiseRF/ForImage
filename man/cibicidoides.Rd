@@ -3,7 +3,7 @@
 \docType{data}
 \name{cibicidoides}
 \alias{cibicidoides}
-\title{Cibicidoides size data}
+\title{\emph{Cibicidoides} size data}
 \format{
 A data frame with 118 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 118 rows and 7 variables:
 cibicidoides
 }
 \description{
-A dataset containing the size and other attributes of species from genus Cibicidoides.
+A dataset containing the size and other attributes of species from genus \emph{Cibicidoides}.
  The variables are as follows:
 }
 \keyword{datasets}

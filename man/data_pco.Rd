@@ -21,7 +21,7 @@ These genera data are originally from previous work - Freitas et al. (2019)
 \details{
 foraminifera genera with \code{(pco)} available:
 \tabular{rlll}{
- \tab"ammonia"\tab"amphis"\tab"angulogerina"\cr
+ \tab"ammonia"\tab"amphistegina"\tab"angulogerina"\cr
  \tab"archaias"\tab"asterotrochammina"\tab"bolivina"\cr
  \tab"buliminella"\tab"cancris"\tab"caronia"\cr
  \tab"cassidulina"\tab"cibicides"\tab"cibicidoides"\cr

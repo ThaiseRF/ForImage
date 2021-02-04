@@ -3,12 +3,12 @@
 \docType{data}
 \name{exampleImage}
 \alias{exampleImage}
-\title{Foraminifeal photomicrographs for \code{forImage} examples}
+\title{Foraminiferal photomicrograph for \code{forImage} examples}
 \format{
 Image objects with variable dimension and resolution.
 }
 \description{
-This dataset contains image files of several foraminiferal genera.
+Contains image file of one foraminifer.
 These files are originally from previous work - Freitas et al. (2019)
 }
 \keyword{dataset}

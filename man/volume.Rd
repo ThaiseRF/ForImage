@@ -38,8 +38,11 @@ A dataframe or numeric object, consisting of calculated individual volume along 
 The function calculates organisms volume based on geometric approximation.
 }
 \details{
-These geometric models applied in this function are based in the selection made by Freitas et al. Which were mainly based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}. Some other formulas were adapted \code{('.fs')} to better calculate the test volume of benthic foraminifera.
- For more information, see \href{Freitas et al. (2019)}{Freitas et al. (2019)}
+These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}.
+\tabular{ll}{
+  \code{'1hl'}
+  \tab \eqn{V} = (pi * (d_one^3))/6
+}
 }
 \examples{
 #Ammonia size data

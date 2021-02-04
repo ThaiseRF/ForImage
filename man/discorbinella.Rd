@@ -3,7 +3,7 @@
 \docType{data}
 \name{discorbinella}
 \alias{discorbinella}
-\title{Discorbinella size data}
+\title{\emph{Discorbinella} size data}
 \format{
 A data frame with 318 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 318 rows and 7 variables:
 discorbinella
 }
 \description{
-A dataset containing the size and other attributes of species from genus Discorbinella.
+A dataset containing the size and other attributes of species from genus \emph{Discorbinella}.
  The variables are as follows:
 }
 \keyword{datasets}

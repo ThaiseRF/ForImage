@@ -3,7 +3,7 @@
 \docType{data}
 \name{bolivina}
 \alias{bolivina}
-\title{Bolivina size data}
+\title{\emph{Bolivina} size data}
 \format{
 A data frame with 628 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 628 rows and 7 variables:
 bolivina
 }
 \description{
-A dataset containing the size and other attributes of species from genus Bolivina.
+A dataset containing the size and other attributes of species from genus \emph{Bolivina}.
  The variables are as follows:
 }
 \keyword{datasets}

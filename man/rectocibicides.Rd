@@ -3,7 +3,7 @@
 \docType{data}
 \name{rectocibicides}
 \alias{rectocibicides}
-\title{Rectocibicides size data}
+\title{\emph{Rectocibicides} size data}
 \format{
 A data frame with 199 rows and 4 variables:
 \describe{
@@ -18,7 +18,7 @@ A data frame with 199 rows and 4 variables:
 rectocibicides
 }
 \description{
-A dataset containing the size and other attributes of genus Rectocibicides
+A dataset containing the size and other attributes of genus \emph{Rectocibicides}.
  The variables are as follows:
 }
 \keyword{datasets}

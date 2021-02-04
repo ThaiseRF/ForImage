@@ -7,7 +7,7 @@
 bio.volume(data, pco = 0.76, genus = NULL, model = NULL)
 }
 \arguments{
-\item{data}{a numeric vector or data frame with size data. Size data parameters by model see.}
+\item{data}{a numeric vector or data frame with size data. Size data parameters by model see \code{\link{volume}} Details.}
 
 \item{pco}{(optional) vector informing percent of cell occupancy in the test. Default value set for specific genus in \code{\link{data_pco}}.}
 
@@ -19,7 +19,7 @@ bio.volume(data, pco = 0.76, genus = NULL, model = NULL)
 This function calculates foraminifera biovolume, through geometric approximation. To compute others organisms cell volume use \code{\link{volume.total}} function
 }
 \details{
-The function calculates the biovolume of different individuals from the available genera. The geometric models are applied automatically based on adaptation performed by.
+The function calculates the biovolume of different individuals from the available genera.
 }
 \examples{
 # Calculate biovolume for different genera

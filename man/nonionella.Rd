@@ -3,7 +3,7 @@
 \docType{data}
 \name{nonionella}
 \alias{nonionella}
-\title{Nonionella size data}
+\title{\emph{Nonionella} size data}
 \format{
 A data frame with 208 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 208 rows and 7 variables:
 nonionella
 }
 \description{
-A dataset containing the size and other attributes of species from genus Nonionella.
+A dataset containing the size and other attributes of species from genus \emph{Nonionella}.
  The variables are as follows:
 }
 \keyword{datasets}

@@ -3,7 +3,7 @@
 \docType{data}
 \name{loxostomina}
 \alias{loxostomina}
-\title{Loxostomina size data}
+\title{\emph{Loxostomina} size data}
 \format{
 A data frame with 31 rows and 7 variables:
 \describe{
@@ -19,7 +19,7 @@ A data frame with 31 rows and 7 variables:
 loxostomina
 }
 \description{
-A dataset containing the size and other attributes of species from genus Loxostomina.
+A dataset containing the size and other attributes of species from genus \emph{Loxostomina}.
  The variables are as follows:
 }
 \keyword{datasets}

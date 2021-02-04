@@ -3,7 +3,7 @@
 \docType{data}
 \name{spirillina}
 \alias{spirillina}
-\title{Spirillina size data}
+\title{\emph{Spirillina} size data}
 \format{
 A data frame with 42 rows and 6 variables:
 \describe{
@@ -19,7 +19,7 @@ A data frame with 42 rows and 6 variables:
 spirillina
 }
 \description{
-A dataset containing the size and other attributes of species from genus Spirillina
+A dataset containing the size and other attributes of species from genus \emph{Spirillina}.
  The variables are as follows:
 }
 \keyword{datasets}

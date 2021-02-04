@@ -3,7 +3,7 @@
 \docType{data}
 \name{ammonia}
 \alias{ammonia}
-\title{Ammonia size data}
+\title{\emph{Ammonia} size data}
 \format{
 A data frame with 867 rows and 7 variables:
 \describe{
@@ -20,7 +20,7 @@ A data frame with 867 rows and 7 variables:
 ammonia
 }
 \description{
-A dataset containing the size and other attributes of species from genus Ammonia.
+A dataset containing the size and other attributes of species from genus \emph{Ammonia}.
  The variables are as follows:
 }
 \keyword{datasets}
