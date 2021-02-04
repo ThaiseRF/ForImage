@@ -3,7 +3,7 @@
 \docType{data}
 \name{data_pco}
 \alias{data_pco}
-\title{Foraminifeal genera data for \code{forImage} examples}
+\title{Foraminiferal genera data for \code{forImage} examples}
 \format{
 A data frame with 72 rows and 3 variables:
 \describe{
@@ -15,11 +15,11 @@ A data frame with 72 rows and 3 variables:
 }
 }
 \description{
-This dataset contains protoplasm occupancy mean and standart deviation data of 72 foraminifera genera.
-These genera data are originally from previous work - Freitas et al. (2019)
+This dataset contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
+These genera data are originally from Freitas et al. (2019)
 }
 \details{
-foraminifera genera with \code{(pco)} available:
+Foraminifera genera with \code{(pco)} available:
 \tabular{rlll}{
  \tab"ammonia"\tab"amphistegina"\tab"angulogerina"\cr
  \tab"archaias"\tab"asterotrochammina"\tab"bolivina"\cr

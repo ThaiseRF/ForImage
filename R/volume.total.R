@@ -23,7 +23,8 @@
 #'   \item \code{'ahx'} : area x height
 #'
 #' }
-#' @details These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}.
+#' @param ... other parameters.
+#' @details These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}. The models can be a variable in \code{data} if specified as \code{model}.The size data parameters should follow the specified measures determined by each model, where \eqn{d_one} is minor diameter, \eqn{d_two} is major diameter and \eqn{h} is height.
 #' \tabular{ll}{
 #'   \code{'1hl'}
 #'   \tab \eqn{V = (pi * (d_one^3))/6}
@@ -41,6 +42,7 @@
 #'   \tab \eqn{V = (pi * hx * (d_one^2))/8}
 #'   \cr
 #'   \tab where \eqn{hx} is a function of test height for trochamminids.
+#'   \cr
 #'   \code{'7fs'}
 #'   \tab \eqn{V = (pi * h * (4 * (h^2) + 3 * (d_one^2)))/24}
 #'   \cr
@@ -68,9 +70,8 @@
 #'   \code{'17fs'}
 #'   \tab \eqn{V = ((length * width)/2) * h)/3}
 #'   \cr
-#'   where \eqn{d_one} is minor diameter, \eqn{d_two} is major diameter and \eqn{h} is height.
+#'
 #' }
-#' The size data parameters should follow the specified measures determined by each model. Which can be a variable in the dataframe if specified as \code{model}.
 #'
 #' @return A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}

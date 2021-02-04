@@ -7,7 +7,7 @@
 \method{volume}{total}(data, model, ...)
 }
 \arguments{
-\item{data}{data frame containing size data. Size data parameters by model see.}
+\item{data}{data frame containing size data. Size data parameters may vary according to chosen model, see Details.}
 
 \item{model}{character informing geometric model to calculate volume, the models options are listed below:
 \itemize{
@@ -25,11 +25,11 @@
   \item \code{'14hl'} : prism on elliptic base/elliptic cylinder
   \item \code{'15hl'} : half elliptic prism
   \item \code{'17fs'} : triangular dypyramid
-  \item \code{'ahx'} : area x heigth
+  \item \code{'ahx'} : area x height
 
 }}
 
-\item{...}{other arguments.}
+\item{...}{other parameters.}
 }
 \value{
 A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
@@ -38,10 +38,53 @@ A dataframe or numeric object, consisting of calculated individual volume along 
 The function calculates organisms volume based on geometric approximation.
 }
 \details{
-These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}.
+These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}. The models can be a variable in \code{data} if specified as \code{model}.The size data parameters should follow the specified measures determined by each model, where \eqn{d_one} is minor diameter, \eqn{d_two} is major diameter and \eqn{h} is height.
 \tabular{ll}{
   \code{'1hl'}
-  \tab \eqn{V} = (pi * (d_one^3))/6
+  \tab \eqn{V = (pi * (d_one^3))/6}
+  \cr
+  \code{'2sl'}
+  \tab \eqn{V = (pi * (d_one^3))/12}
+  \cr
+  \code{'3hl'}
+  \tab \eqn{V = (pi * h * (d_one^2))/6}
+  \cr
+  \code{'4hl'}
+  \tab \eqn{V = (pi * h * (d_one^2))/12}
+  \cr
+  \code{'6fs'}
+  \tab \eqn{V = (pi * hx * (d_one^2))/8}
+  \cr
+  \tab where \eqn{hx} is a function of test height for trochamminids.
+  \cr
+  \code{'7fs'}
+  \tab \eqn{V = (pi * h * (4 * (h^2) + 3 * (d_one^2)))/24}
+  \cr
+  \code{'8hl'}
+  \tab \eqn{V = (pi * h * (d_one^2))/4}
+  \cr
+  \code{'10hl'}
+  \tab \eqn{V = (pi * h * d_one * d_two)/6}
+  \cr
+  \code{'11fs'}
+  \tab \eqn{V = (pi * h * d_one * d_two)/12}
+  \cr
+  \code{'12v'}
+  \tab \eqn{V = (pi * h * d_one * d_two)/12}
+  \cr
+  \code{'13hlsl'}
+  \tab \eqn{V = ((d_one * d_two)/4) * (d_one + ((pi/4) - 1) * d_two) * asin(h/(2*d_one))}
+  \cr
+  \code{'14hl'}
+  \tab \eqn{V = (pi * h * d_one * d_two)/4}
+  \cr
+  \code{'15hl'}
+  \tab \eqn{V = pi * h * d_one * d_two)/4}
+  \cr
+  \code{'17fs'}
+  \tab \eqn{V = ((length * width)/2) * h)/3}
+  \cr
+
 }
 }
 \examples{
@@ -51,10 +94,6 @@ data("ammonia")
 #calculate test volume
 volume.total(ammonia, model = "10hl")
 
-
-#with model argument in column (for more than 1 model)
-am <- dplyr::mutate(ammonia, model = "10hl")
-volume.total(am)
 
 }
 \references{
