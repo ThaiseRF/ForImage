@@ -1,31 +1,41 @@
 Package: forImage
 Type: Package
-Title: Foraminiferal image analysis and test measurement
+Title: Foraminiferal Image Analysis and Test Measurement
 Version: 0.1.0
 Authors@R: c(
-    person("Thaise", "R. Freitas", , "thaisericardo.freitas@gmail.com", c("aut", "cre")),
+    person("Thaise", "R Freitas", , "thaisericardo.freitas@gmail.com", c("aut", "cre")),
     person("Eduardo", "Bacalhau", , role = "aut"),
     person("Carla", "Bonetti", , role = "aut"))
-Maintainer: Thaise Ricardo <thaisericardo.freitas@gmail.com>
+Maintainer: Thaise R Freitas <thaisericardo.freitas@gmail.com>
 Description:
     It allows measurement of foraminiferal test and other unicellulars organisms size.
     With functions developed to calculate foraminiferal test biovolume and estimate cell biomass.
-License: GPL-3
+License: MIT + file LICENSE
+URL: https://github.com/ThaiseRF/forImage
+BugReports: https://github.com/ThaiseRF/forImage/issues
 Encoding: UTF-8
 Depends: R (>= 3.2.0)
 LazyData: true
 Imports: dplyr,
     magrittr,
     tibble,
-    reticulate,
-    data.table,
-    xml2
+    reticulate
 RoxygenNote: 7.1.0
 Suggests: 
     knitr,
     rmarkdown,
+    data.table,
+    xml2,
+    raster,
     testthat (>= 2.1.0)
+SystemRequirements: Python >=3.5,
+        numpy ( >= 1.18.1),
+        imutils ( >= 0.5.3),
+        scipy ( >= 1.4.1),
+        pandas ( >= 1.0.2),
+        Pillow ( >= 7.0.0),
+        opencv ( >= 4.1.2)
 VignetteBuilder: knitr
-Author: Thaise R. Freitas [aut, cre], 
+Author: Thaise R Freitas [aut, cre], 
   Eduardo Bacalhau [aut],
   Carla Bonetti [aut]
