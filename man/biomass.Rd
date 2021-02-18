@@ -12,25 +12,26 @@ biomass(biovolume, method = "michaels")
 \item{method}{The methods of convertion from biovolume to biomass are listed below, default is \code{'michaels'}:
 \itemize{
   \item \code{'saidova'} : adopted cell density of 1.027 g/cm3;
-  \item \code{'strathmann'} : measured cell density of 0.110 pgC[org]/μm3;
-  \item \code{'turley'} : estimated cell density of 0.132 pgC[org]/μm3;
-  \item \code{'putt'} : estimated cell density of 0.140 pgC[org]/μm3;
+  \item \code{'strathmann'} : measured cell density of 0.110 pgC[org]/um3;
+  \item \code{'turley'} : estimated cell density of 0.132 pgC[org]/um3;
+  \item \code{'putt'} : estimated cell density of 0.140 pgC[org]/um3;
   \item \code{'gerlach'} : adopted cell density of 1.13 g/cm3 wet mass, assuming 10 percent as living organic carbon;
-  \item \code{'michaels'} : calculated cell density of 0.089 pgC[org]/μm3.
+  \item \code{'michaels'} : calculated cell density of 0.089 pgC[org]/um3.
 
 
 }}
 }
 \value{
-An dataframe or numeric object, consisting of calculated biomass in μgC[org]/ind.
+An dataframe or numeric object, consisting of calculated biomass in ugC[org]/ind.
 }
 \description{
 The function estimates biomass through biovolume data and applies different cell density values as conversion methods.
 See details \sQuote{Details}:
 }
 \details{
-For biomass estimates based on biovolume is usual the application of a cell density value, to retrieve the amount of organic carbon in the organism. The function made available distinct options of conversion factor which are based in several authors. These factors have been applied to a wide diversity of nano, micro, and macro-organisms, some applied to foraminifera and other nearby groups.
- For more information, see \href{changelater}{Freitas et al.}
+For biomass estimates based on biovolume is usual the application of a cell density value, to retrieve the amount of organic carbon in the organism.
+The function made available distinct options of conversion factor which are based in several authors.
+These factors have been applied to a wide diversity of nano, micro, and macro-organisms, some applied to foraminifera and other nearby groups.
 }
 \examples{
 #Ammonia biomass calculation

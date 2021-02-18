@@ -9,18 +9,19 @@
 #' @param method The methods of convertion from biovolume to biomass are listed below, default is \code{'michaels'}:
 #' \itemize{
 #'   \item \code{'saidova'} : adopted cell density of 1.027 g/cm3;
-#'   \item \code{'strathmann'} : measured cell density of 0.110 pgC[org]/μm3;
-#'   \item \code{'turley'} : estimated cell density of 0.132 pgC[org]/μm3;
-#'   \item \code{'putt'} : estimated cell density of 0.140 pgC[org]/μm3;
+#'   \item \code{'strathmann'} : measured cell density of 0.110 pgC[org]/um3;
+#'   \item \code{'turley'} : estimated cell density of 0.132 pgC[org]/um3;
+#'   \item \code{'putt'} : estimated cell density of 0.140 pgC[org]/um3;
 #'   \item \code{'gerlach'} : adopted cell density of 1.13 g/cm3 wet mass, assuming 10 percent as living organic carbon;
-#'   \item \code{'michaels'} : calculated cell density of 0.089 pgC[org]/μm3.
+#'   \item \code{'michaels'} : calculated cell density of 0.089 pgC[org]/um3.
 #'
 #'
 #' }
-#' @details For biomass estimates based on biovolume is usual the application of a cell density value, to retrieve the amount of organic carbon in the organism. The function made available distinct options of conversion factor which are based in several authors. These factors have been applied to a wide diversity of nano, micro, and macro-organisms, some applied to foraminifera and other nearby groups.
-#'  For more information, see \href{changelater}{Freitas et al.}
+#' @details For biomass estimates based on biovolume is usual the application of a cell density value, to retrieve the amount of organic carbon in the organism.
+#' The function made available distinct options of conversion factor which are based in several authors.
+#' These factors have been applied to a wide diversity of nano, micro, and macro-organisms, some applied to foraminifera and other nearby groups.
 #'
-#' @return An dataframe or numeric object, consisting of calculated biomass in μgC[org]/ind.
+#' @return An dataframe or numeric object, consisting of calculated biomass in ugC[org]/ind.
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #' @references
@@ -55,12 +56,12 @@ biomass <- function(biovolume, method = "michaels"){
   x <- data.frame(biovolume)
 
   if (is.null(method)) {
-    method = "michaels"
+    method <- "michaels"
   }
 
   if (method == "saidova" | method == "Saidova") {
 
-    b = x$biovol * 0.1027
+    b <- x$biovol * 0.1027
 
     result <- x %>%
       tibble::as_tibble() %>%
