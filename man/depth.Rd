@@ -12,7 +12,7 @@
 \item{...}{other arguments.}
 }
 \value{
-A dataframe with the folowing information:
+A dataframe with the following information:
 \itemize{
   \item {file} : {filename}
   \item {z_depth} : {measured focus range depth (z)}}
