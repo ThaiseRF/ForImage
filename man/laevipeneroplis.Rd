@@ -3,17 +3,17 @@
 \docType{data}
 \name{laevipeneroplis}
 \alias{laevipeneroplis}
-\title{\emph{Laevipeneroplis} size data}
+\title{Laevipeneroplis size data}
 \format{
 A data frame with 79 rows and 7 variables:
 \describe{
   \item{species}{species of genus Laevipeneroplis from which raw data were gathered}
   \item{ind}{number of individuals by species}
-  \item{h}{test height in μm (40--633.9)}
-  \item{d_one}{test minor diameter in  μm (47--624.2)}
-  \item{area}{test surface area in μm2 (8827--306012)}
+  \item{h}{test height in um (40--633.9)}
+  \item{d_one}{test minor diameter in  um (47--624.2)}
+  \item{area}{test surface area in um2 (8827--306012)}
   \item{pco}{percent cell occupancy of the test (15.24--100)}
-  \item{d_two}{test major diameter in  μm (169.2--544.0) - The NA's related to one species of this genus that don't required this measure}
+  \item{d_two}{test major diameter in  um (169.2--544.0) - The NA's related to one species of this genus that don't required this measure}
 }
 }
 \usage{

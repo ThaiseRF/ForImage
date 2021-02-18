@@ -3,16 +3,16 @@
 \docType{data}
 \name{nonionella}
 \alias{nonionella}
-\title{\emph{Nonionella} size data}
+\title{Nonionella size data}
 \format{
 A data frame with 208 rows and 7 variables:
 \describe{
   \item{species}{species of genus Nonionella from which raw data were gathered}
   \item{ind}{number of individuals by species}
-  \item{d_one}{test minor diameter in μm (93.39--564.98)}
-  \item{h}{test height in μm (19.50--294.00)}
-  \item{d_two}{test major diameter in  μm (82.99--547.67)}
-  \item{area}{test surface area in μm2 (5783--222371)}
+  \item{d_one}{test minor diameter in um (93.39--564.98)}
+  \item{h}{test height in um (19.50--294.00)}
+  \item{d_two}{test major diameter in  um (82.99--547.67)}
+  \item{area}{test surface area in um2 (5783--222371)}
   \item{pco}{percent cell occupancy of the test (15.51--100)}
 }
 }

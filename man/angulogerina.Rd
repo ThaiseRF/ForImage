@@ -3,15 +3,15 @@
 \docType{data}
 \name{angulogerina}
 \alias{angulogerina}
-\title{\emph{Angulogerina} size data}
+\title{Angulogerina size data}
 \format{
 A data frame with 100 rows and 6 variables:
 \describe{
   \item{ind}{number of individuals}
-  \item{h}{test height in μm (81.75--380.91)}
-  \item{d_one}{test minor diameter in  μm (34--156)}
-  \item{d_two}{test major diameter in  μm (66.04--237.34)}
-  \item{area}{test surface area in μm2 (4654--41915)}
+  \item{h}{test height in um (81.75--380.91)}
+  \item{d_one}{test minor diameter in  um (34--156)}
+  \item{d_two}{test major diameter in  um (66.04--237.34)}
+  \item{area}{test surface area in um2 (4654--41915)}
   \item{pco}{percent cell occupancy of the test (6.818--100)}
 }
 }

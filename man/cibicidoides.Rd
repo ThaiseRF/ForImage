@@ -3,16 +3,16 @@
 \docType{data}
 \name{cibicidoides}
 \alias{cibicidoides}
-\title{\emph{Cibicidoides} size data}
+\title{Cibicidoides size data}
 \format{
 A data frame with 118 rows and 7 variables:
 \describe{
   \item{species}{species of genus Cibicidoides from which raw data were gathered}
   \item{ind}{number of individuals by species}
-  \item{h}{test height in μm (24--117)}
-  \item{d_one}{test minor diameter in  μm (76.46--266.85)}
-  \item{radius}{test radius in  μm (38.23--133.43)}
-  \item{area}{test surface area in μm2 (4591--55928)}
+  \item{h}{test height in um (24--117)}
+  \item{d_one}{test minor diameter in  um (76.46--266.85)}
+  \item{radius}{test radius in  um (38.23--133.43)}
+  \item{area}{test surface area in um2 (4591--55928)}
   \item{pco}{percent cell occupancy of the test (11.87--100)}
 }
 }

@@ -57,7 +57,7 @@ NULL
 #' @name exampleImage
 NULL
 
-#' \emph{Ammonia} size data
+#' Ammonia size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Ammonia}.
 #'  The variables are as follows:
@@ -66,15 +66,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Ammonia from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (82.05--390.65)}
-#'   \item{d_one}{test minor diameter in  μm (20--220)}
-#'   \item{d_two}{test major diameter in  μm (75.1--364.6)}
-#'   \item{area}{test surface area in μm2 (4438--107903)}
+#'   \item{h}{test height in um (82.05--390.65)}
+#'   \item{d_one}{test minor diameter in  um (20--220)}
+#'   \item{d_two}{test major diameter in  um (75.1--364.6)}
+#'   \item{area}{test surface area in um2 (4438--107903)}
 #'   \item{pco}{percent cell occupancy of the test (11--100)}
 #' }
 "ammonia"
 
-#' \emph{Amphistegina} size data
+#' Amphistegina size data
 #'
 #' A dataset containing the size and other attributes of genus \emph{Amphistegina}.
 #'  The variables are as follows:
@@ -82,14 +82,14 @@ NULL
 #' @format A data frame with 167 rows and 5 variables:
 #' \describe{
 #'   \item{ind}{number of individuals}
-#'   \item{h}{test height in μm (60.0--579.0)}
-#'   \item{d_one}{test diameter in  μm (111.3--1193.1)}
-#'   \item{area}{test surface area in μm2 (9722--3027282)}
+#'   \item{h}{test height in um (60.0--579.0)}
+#'   \item{d_one}{test diameter in  um (111.3--1193.1)}
+#'   \item{area}{test surface area in um2 (9722--3027282)}
 #'   \item{pco}{percent cell occupancy of the test (3.408--100)}
 #' }
 "amphistegina"
 
-#' \emph{Angulogerina} size data
+#' Angulogerina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Angulogerina}.
 #'  The variables are as follows:
@@ -97,15 +97,15 @@ NULL
 #' @format A data frame with 100 rows and 6 variables:
 #' \describe{
 #'   \item{ind}{number of individuals}
-#'   \item{h}{test height in μm (81.75--380.91)}
-#'   \item{d_one}{test minor diameter in  μm (34--156)}
-#'   \item{d_two}{test major diameter in  μm (66.04--237.34)}
-#'   \item{area}{test surface area in μm2 (4654--41915)}
+#'   \item{h}{test height in um (81.75--380.91)}
+#'   \item{d_one}{test minor diameter in  um (34--156)}
+#'   \item{d_two}{test major diameter in  um (66.04--237.34)}
+#'   \item{area}{test surface area in um2 (4654--41915)}
 #'   \item{pco}{percent cell occupancy of the test (6.818--100)}
 #' }
 "angulogerina"
 
-#' \emph{Asterotrochammina} size data
+#' Asterotrochammina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Asterotrochammina}.
 #'  The variables are as follows:
@@ -114,15 +114,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Asterotrochammina from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (12--72)}
-#'   \item{d_one}{test minor diameter in  μm (77.86--265.50)}
-#'   \item{radius}{test radius in  μm (38.93--132.75)}
-#'   \item{area}{test surface area in μm2 (4761--57577)}
+#'   \item{h}{test height in um (12--72)}
+#'   \item{d_one}{test minor diameter in  um (77.86--265.50)}
+#'   \item{radius}{test radius in  um (38.93--132.75)}
+#'   \item{area}{test surface area in um2 (4761--57577)}
 #'   \item{pco}{percent cell occupancy of the test (15--100)}
 #' }
 "asterotrochammina"
 
-#' \emph{Bolivina} size data
+#' Bolivina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Bolivina}.
 #'  The variables are as follows:
@@ -131,15 +131,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Bolivina from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{d_one}{test minor diameter in μm (72.37--502.12)}
-#'   \item{h}{test height (thickness) in μm (12.5--83.0)}
-#'   \item{d_two}{test major diameter in  μm (60.60--226.21)}
-#'   \item{area}{test surface area in μm2 (3187--72244)}
+#'   \item{d_one}{test minor diameter in um (72.37--502.12)}
+#'   \item{h}{test height (thickness) in um (12.5--83.0)}
+#'   \item{d_two}{test major diameter in  um (60.60--226.21)}
+#'   \item{area}{test surface area in um2 (3187--72244)}
 #'   \item{pco}{percent cell occupancy of the test (9.72--100)}
 #' }
 "bolivina"
 
-#' \emph{Cibicidoides} size data
+#' Cibicidoides size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Cibicidoides}.
 #'  The variables are as follows:
@@ -148,15 +148,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Cibicidoides from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (24--117)}
-#'   \item{d_one}{test minor diameter in  μm (76.46--266.85)}
-#'   \item{radius}{test radius in  μm (38.23--133.43)}
-#'   \item{area}{test surface area in μm2 (4591--55928)}
+#'   \item{h}{test height in um (24--117)}
+#'   \item{d_one}{test minor diameter in  um (76.46--266.85)}
+#'   \item{radius}{test radius in  um (38.23--133.43)}
+#'   \item{area}{test surface area in um2 (4591--55928)}
 #'   \item{pco}{percent cell occupancy of the test (11.87--100)}
 #' }
 "cibicidoides"
 
-#' \emph{Discorbinella} size data
+#' Discorbinella size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Discorbinella}.
 #'  The variables are as follows:
@@ -165,15 +165,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Discorbinella from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (15--72)}
-#'   \item{d_one}{test minor diameter in  μm (67.69--197.43)}
-#'   \item{radius}{test radius in  μm (33.85--98.71)}
-#'   \item{area}{test surface area in μm2 (3599--30614)}
+#'   \item{h}{test height in um (15--72)}
+#'   \item{d_one}{test minor diameter in  um (67.69--197.43)}
+#'   \item{radius}{test radius in  um (33.85--98.71)}
+#'   \item{area}{test surface area in um2 (3599--30614)}
 #'   \item{pco}{percent cell occupancy of the test (9.673--100)}
 #' }
 "discorbinella"
 
-#' \emph{Laevipeneroplis} size data
+#' Laevipeneroplis size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
 #'  The variables are as follows:
@@ -182,15 +182,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Laevipeneroplis from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (40--633.9)}
-#'   \item{d_one}{test minor diameter in  μm (47--624.2)}
-#'   \item{area}{test surface area in μm2 (8827--306012)}
+#'   \item{h}{test height in um (40--633.9)}
+#'   \item{d_one}{test minor diameter in  um (47--624.2)}
+#'   \item{area}{test surface area in um2 (8827--306012)}
 #'   \item{pco}{percent cell occupancy of the test (15.24--100)}
-#'   \item{d_two}{test major diameter in  μm (169.2--544.0) - The NA's related to one species of this genus that don't required this measure}
+#'   \item{d_two}{test major diameter in  um (169.2--544.0) - The NA's related to one species of this genus that don't required this measure}
 #' }
 "laevipeneroplis"
 
-#' \emph{Loxostomina} size data
+#' Loxostomina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Loxostomina}.
 #'  The variables are as follows:
@@ -198,15 +198,15 @@ NULL
 #' @format A data frame with 31 rows and 7 variables:
 #' \describe{
 #'   \item{ind}{number of individuals by species}
-#'   \item{d_one}{test minor diameter in μm (101.4--534.6)}
-#'   \item{h}{test height in μm (28.0--80.0)}
-#'   \item{d_two}{test major diameter in  μm (89.76--261.17)}
-#'   \item{area}{test surface area in μm2 (6636--76089)}
+#'   \item{d_one}{test minor diameter in um (101.4--534.6)}
+#'   \item{h}{test height in um (28.0--80.0)}
+#'   \item{d_two}{test major diameter in  um (89.76--261.17)}
+#'   \item{area}{test surface area in um2 (6636--76089)}
 #'   \item{pco}{percent cell occupancy of the test (9.88--100)}
 #' }
 "loxostomina"
 
-#' \emph{Nonionella} size data
+#' Nonionella size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Nonionella}.
 #'  The variables are as follows:
@@ -215,15 +215,15 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Nonionella from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{d_one}{test minor diameter in μm (93.39--564.98)}
-#'   \item{h}{test height in μm (19.50--294.00)}
-#'   \item{d_two}{test major diameter in  μm (82.99--547.67)}
-#'   \item{area}{test surface area in μm2 (5783--222371)}
+#'   \item{d_one}{test minor diameter in um (93.39--564.98)}
+#'   \item{h}{test height in um (19.50--294.00)}
+#'   \item{d_two}{test major diameter in  um (82.99--547.67)}
+#'   \item{area}{test surface area in um2 (5783--222371)}
 #'   \item{pco}{percent cell occupancy of the test (15.51--100)}
 #' }
 "nonionella"
 
-#' \emph{Patellina} size data
+#' Patellina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Patellina}.
 #'  The variables are as follows:
@@ -231,15 +231,15 @@ NULL
 #' @format A data frame with 79 rows and 6 variables:
 #' \describe{
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (24--66)}
-#'   \item{d_one}{test minor diameter in μm (84.84--247.46)}
-#'   \item{radius}{test radius in  μm (42.42--123.73)}
-#'   \item{area}{test surface area in μm2 (5653--87838)}
+#'   \item{h}{test height in um (24--66)}
+#'   \item{d_one}{test minor diameter in um (84.84--247.46)}
+#'   \item{radius}{test radius in  um (42.42--123.73)}
+#'   \item{area}{test surface area in um2 (5653--87838)}
 #'   \item{pco}{percent cell occupancy of the test (9.94--100)}
 #' }
 "patellina"
 
-#' \emph{Quinqueloculina} size data
+#' Quinqueloculina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
 #'  The variables are as follows:
@@ -248,19 +248,19 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Quinqueloculina from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (107.4--944.4)}
-#'   \item{d_one}{test minor diameter in μm (26.94--389.73)}
-#'   \item{d_two}{test major diameter in  μm (18.52--662.23)}
-#'   \item{area}{test surface area in μm2 (6294--431271)}
+#'   \item{h}{test height in um (107.4--944.4)}
+#'   \item{d_one}{test minor diameter in um (26.94--389.73)}
+#'   \item{d_two}{test major diameter in  um (18.52--662.23)}
+#'   \item{area}{test surface area in um2 (6294--431271)}
 #'   \item{pco}{percent cell occupancy of the test (13.76--100)}
-#'   \item{length}{test length in μm (44.02--609.00)}
-#'   \item{width}{test width in μm (83.72--688.32)}
+#'   \item{length}{test length in um (44.02--609.00)}
+#'   \item{width}{test width in um (83.72--688.32)}
 #'   \item{model}{adequated geometric model ('10hl'--'17fs')}
 #' }
 "quinqueloculina"
 
 
-#' \emph{Rectocibicides} size data
+#' Rectocibicides size data
 #'
 #' A dataset containing the size and other attributes of genus \emph{Rectocibicides}.
 #'  The variables are as follows:
@@ -268,14 +268,14 @@ NULL
 #' @format A data frame with 199 rows and 4 variables:
 #' \describe{
 #'   \item{ind}{number of individuals}
-#'   \item{h}{test height in μm (22.00--101.50)}
-#'   \item{area}{test surface area in μm2 (3450--674280)}
+#'   \item{h}{test height in um (22.00--101.50)}
+#'   \item{area}{test surface area in um2 (3450--674280)}
 #'   \item{pco}{percent cell occupancy of the test (10--100)}
 #'
 #' }
 "rectocibicides"
 
-#' \emph{Spirillina} size data
+#' Spirillina size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Spirillina}.
 #'  The variables are as follows:
@@ -283,15 +283,15 @@ NULL
 #' @format A data frame with 42 rows and 6 variables:
 #' \describe{
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (12--44)}
-#'   \item{d_one}{test minor diameter in μm (73.71--105.14)}
-#'   \item{radius}{test radius in  μm (36.86--123.73)}
-#'   \item{area}{test surface area in μm2 (4268--34730)}
+#'   \item{h}{test height in um (12--44)}
+#'   \item{d_one}{test minor diameter in um (73.71--105.14)}
+#'   \item{radius}{test radius in  um (36.86--123.73)}
+#'   \item{area}{test surface area in um2 (4268--34730)}
 #'   \item{pco}{percent cell occupancy of the test (7.10--100)}
 #' }
 "spirillina"
 
-#' \emph{Textularia} size data
+#' Textularia size data
 #'
 #' A dataset containing the size and other attributes of species from genus \emph{Textularia}.
 #'  The variables are as follows:
@@ -300,10 +300,10 @@ NULL
 #' \describe{
 #'   \item{species}{species of genus Textularia from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
-#'   \item{h}{test height in μm (113.6--1034.4)}
-#'   \item{d_one}{test minor diameter in μm (40--306)}
-#'   \item{d_two}{test major diameter in  μm (103.8--552.6)}
-#'   \item{area}{test surface area in μm2 (8235--336929)}
+#'   \item{h}{test height in um (113.6--1034.4)}
+#'   \item{d_one}{test minor diameter in um (40--306)}
+#'   \item{d_two}{test major diameter in  um (103.8--552.6)}
+#'   \item{area}{test surface area in um2 (8235--336929)}
 #'   \item{pco}{percent cell occupancy of the test (10.46--100)}
 #' }
 "textularia"

@@ -3,15 +3,15 @@
 \docType{data}
 \name{loxostomina}
 \alias{loxostomina}
-\title{\emph{Loxostomina} size data}
+\title{Loxostomina size data}
 \format{
 A data frame with 31 rows and 7 variables:
 \describe{
   \item{ind}{number of individuals by species}
-  \item{d_one}{test minor diameter in μm (101.4--534.6)}
-  \item{h}{test height in μm (28.0--80.0)}
-  \item{d_two}{test major diameter in  μm (89.76--261.17)}
-  \item{area}{test surface area in μm2 (6636--76089)}
+  \item{d_one}{test minor diameter in um (101.4--534.6)}
+  \item{h}{test height in um (28.0--80.0)}
+  \item{d_two}{test major diameter in  um (89.76--261.17)}
+  \item{area}{test surface area in um2 (6636--76089)}
   \item{pco}{percent cell occupancy of the test (9.88--100)}
 }
 }

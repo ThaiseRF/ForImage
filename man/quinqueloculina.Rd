@@ -3,19 +3,19 @@
 \docType{data}
 \name{quinqueloculina}
 \alias{quinqueloculina}
-\title{\emph{Quinqueloculina} size data}
+\title{Quinqueloculina size data}
 \format{
 A data frame with 688 rows and 10 variables:
 \describe{
   \item{species}{species of genus Quinqueloculina from which raw data were gathered}
   \item{ind}{number of individuals by species}
-  \item{h}{test height in μm (107.4--944.4)}
-  \item{d_one}{test minor diameter in μm (26.94--389.73)}
-  \item{d_two}{test major diameter in  μm (18.52--662.23)}
-  \item{area}{test surface area in μm2 (6294--431271)}
+  \item{h}{test height in um (107.4--944.4)}
+  \item{d_one}{test minor diameter in um (26.94--389.73)}
+  \item{d_two}{test major diameter in  um (18.52--662.23)}
+  \item{area}{test surface area in um2 (6294--431271)}
   \item{pco}{percent cell occupancy of the test (13.76--100)}
-  \item{length}{test length in μm (44.02--609.00)}
-  \item{width}{test width in μm (83.72--688.32)}
+  \item{length}{test length in um (44.02--609.00)}
+  \item{width}{test width in um (83.72--688.32)}
   \item{model}{adequated geometric model ('10hl'--'17fs')}
 }
 }

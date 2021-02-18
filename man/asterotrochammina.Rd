@@ -3,16 +3,16 @@
 \docType{data}
 \name{asterotrochammina}
 \alias{asterotrochammina}
-\title{\emph{Asterotrochammina} size data}
+\title{Asterotrochammina size data}
 \format{
 A data frame with 335 rows and 7 variables:
 \describe{
   \item{species}{species of genus Asterotrochammina from which raw data were gathered}
   \item{ind}{number of individuals by species}
-  \item{h}{test height in μm (12--72)}
-  \item{d_one}{test minor diameter in  μm (77.86--265.50)}
-  \item{radius}{test radius in  μm (38.93--132.75)}
-  \item{area}{test surface area in μm2 (4761--57577)}
+  \item{h}{test height in um (12--72)}
+  \item{d_one}{test minor diameter in  um (77.86--265.50)}
+  \item{radius}{test radius in  um (38.93--132.75)}
+  \item{area}{test surface area in um2 (4761--57577)}
   \item{pco}{percent cell occupancy of the test (15--100)}
 }
 }
