@@ -21,10 +21,11 @@ A dataframe with the folowing information:
 The function retrieves the object depth information from image metadata as source.
 }
 \examples{
+\dontrun{
 #Path to example file from package
 meta <- system.file("extdata", "foram.tif_meta.xml", package="forImage")
 
 #retrieve z-depth data
-depth.xml(meta)
+depth.xml(meta)}
 
 }
