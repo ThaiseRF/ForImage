@@ -24,7 +24,8 @@
 #'
 #' }
 #' @param ... other parameters.
-#' @details These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}. The models can be a variable in \code{data} if specified as \code{model}.The size data parameters should follow the specified measures determined by each model, where \eqn{d_one} is minor diameter, \eqn{d_two} is major diameter and \eqn{h} is height.
+#' @details These geometric models applied in this function are based and adapted from microalgae models developed by Hillebrand et al. (1999) - \code{('.hl')}, Sun and Liu (2003) - \code{('.sl')} and Vadrucci, Cabrini and Basset (2007) - \code{('.v')}, plus other adapted models \code{('.fs')}.
+#' The models can be a variable in \code{data} if specified as \code{model}.The size data parameters should follow the specified measures determined by each model, where \eqn{d_one} is minor diameter, \eqn{d_two} is major diameter and \eqn{h} is height.
 #' \tabular{ll}{
 #'   \code{'1hl'}
 #'   \tab \eqn{V = (pi * (d_one^3))/6}
