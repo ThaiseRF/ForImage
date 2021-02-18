@@ -18,5 +18,13 @@ A dataframe with the folowing information:
   \item {z_depth} : {measured focus range depth (z)}}
 }
 \description{
-The function retrieves the object depth information from image metadata as source. Insert image file if metadata is embedded, or separate metadata file if not.
+The function retrieves the object depth information from image metadata as source.
+}
+\examples{
+#Path to example file from package
+meta <- system.file("extdata", "foram.tif_meta.xml", package="forImage")
+
+#retrieve z-depth data
+depth.xml(meta)
+
 }

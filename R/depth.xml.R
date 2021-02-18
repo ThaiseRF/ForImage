@@ -1,7 +1,6 @@
 #' Import image object depth (Z)
 #'
-#' The function retrieves the object depth information from image metadata as source. Insert image file if metadata is embedded, or separate metadata file if not.
-#'
+#' The function retrieves the object depth information from image metadata as source.
 #'
 #' @param x file containing metadata, if xml type: \code{'.xml', '.tif_meta.xml'}
 #' @param ... other arguments.
@@ -11,6 +10,14 @@
 #'   \item {file} : {filename}
 #'   \item {z_depth} : {measured focus range depth (z)}}
 #' @importFrom magrittr %>%
+#' @examples
+#' \dontrun{
+#' #Path to example file from package
+#' meta <- system.file("extdata", "foram.tif_meta.xml", package="forImage")
+#'
+#' #retrieve z-depth data
+#' depth.xml(meta)}
+#'
 #' @export depth.xml
 #' @rdname depth
 depth.xml <- function(x, ...) {
@@ -21,7 +28,7 @@ depth.xml <- function(x, ...) {
     stop("Object not specified.")
   }
 
-  filename <- sub('\\.tif_meta.xml$', '', xml_file)
+  filename <- basename(sub('\\.tif_meta.xml$', '', xml_file))
 
   data <- xml2::read_xml(xml_file)
 
