@@ -2,7 +2,6 @@ from cv_utilities import Utilities as utils
 import cv2
 import os
 from PIL import Image
-import glob
 import pandas as pd
 
 
@@ -10,7 +9,7 @@ class ComputerVision:
     def __init__(self):
         self.utils = utils()
 
-    def measure_object_dimension(self, image, scale = None, reference_scale = None, unit = 'um', resize_width=0, rotate_angle=0, blur=(1, 9), cannyMin=50, cannyMax=0, edge_iterations=1):
+    def measure_object_dimension(self, image, scale = None, reference_scale = None, unit = 'um', save = False, path = None,  resize_width=0, rotate_angle=0, blur=(1, 9), cannyMin=50, cannyMax=0, edge_iterations=1):
         firstImage = 0
         utils = self.utils
 
@@ -47,16 +46,29 @@ class ComputerVision:
             
             if dA * scale > 50 and dB * scale > 50:
                 diamA, diamB = utils.get_dimensions(dA, dB, scale, resized, unit, tltrX, tltrY, trbrX, trbrY)
-
-                file = os.path.splitext(filename)[0]
-                name = file + ".png"
-                cv2.imwrite(name, resized)
-
-                area = (area[idx] * (scale ** 2))
                 
-                data.append({'diamA': diamA, 'diamB': diamB, 'area': area, 'scale': scale, 'filename': file})
+                # Get the filename only from the initial file path.
+                file = os.path.basename(filename)
+                # split text to get filename and ext separated
+                (file, ext) = os.path.splitext(file) 
+                
+                if save:
+                    name = file + ".png"
+                    if path is None: 
+                        cv2.imwrite(name, resized)
+                    else:
+                        n = path + name
+                        cv2.imwrite(n, resized)
+                        
+                
+                
+                #name = file + ".png"
+                #cv2.imwrite(name, resized)
+
+                data.append({'filename': file, 'diamA': diamA, 'diamB': diamB, 'area': area[idx]})
 
 
         df = pd.DataFrame(data)
+        df.area = df.area * (scale ** 2)
         return df
         
