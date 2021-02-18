@@ -4,7 +4,8 @@
 \alias{measure}
 \title{Foraminifera image measurement}
 \usage{
-measure(file, scale = NULL, ref_scale = NULL, pco = FALSE)
+measure(file, scale = NULL, ref_scale = NULL,
+unit = "um", pco = FALSE, save = FALSE, path = NULL)
 }
 \arguments{
 \item{file}{image file with or without metadata.}
@@ -13,17 +14,29 @@ measure(file, scale = NULL, ref_scale = NULL, pco = FALSE)
 
 \item{ref_scale}{(optional) reference scale available on image (in micrometers or millimeters). This scale should be inserted under the main object.}
 
+\item{unit}{scale unit. Needs to agree with reference scale or metric per pixel. (Default "um")}
+
 \item{pco}{(optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is still being tested and should be used with caution.}
+
+\item{save}{If TRUE save the result image in a specified folder (see \code{path}) or the working directory, if FALSE it does not save the image with measures. (Default FALSE)}
+
+\item{path}{(optional) path to save result file.}
 }
 \value{
-A dataframe
+A dataframe containing filename, surface area and major and minor axis. The unit is dependent on the pixel per metric scale. It also returns a PNG file with the measured dimensions if \code{save = TRUE}.
 }
 \description{
 This function measures dimensions in photomicrographs.
-See details \sQuote{Details}:
 }
 \examples{
-2
+\dontrun{
+#Path to example file from package
+img <- system.file("extdata", "foram.tif", package="forImage")
+
+#measure individual dimension
+measure(img)
+}
+
 }
 \seealso{
 \code{\link{bio.volume}}, \code{\link{volume.total}}

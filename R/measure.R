@@ -2,24 +2,37 @@
 #'
 #' @description
 #' This function measures dimensions in photomicrographs.
-#' See details \sQuote{Details}:
 #'
-#' @usage measure(file, scale = NULL, ref_scale = NULL, pco = FALSE)
+#' @usage measure(file, scale = NULL, ref_scale = NULL,
+#' unit = "um", pco = FALSE, save = FALSE, path = NULL)
 #' @param file image file with or without metadata.
 #' @param scale (optional) image physical pixel size (metric / pixel).
 #' @param ref_scale (optional) reference scale available on image (in micrometers or millimeters). This scale should be inserted under the main object.
+#' @param unit scale unit. Needs to agree with reference scale or metric per pixel. (Default "um")
 #' @param pco (optional) will assess proportion of cell occupancy inside the shell. Outlined proportion. This argument is still being tested and should be used with caution.
+#' @param save If TRUE save the result image in a specified folder (see \code{path}) or the working directory, if FALSE it does not save the image with measures. (Default FALSE)
+#' @param path (optional) path to save result file.
 #'
-#' @return A dataframe
+#'
+#' @return A dataframe containing filename, surface area and major and minor axis. The unit is dependent on the pixel per metric scale. It also returns a PNG file with the measured dimensions if \code{save = TRUE}.
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #'
 #' @seealso \code{\link{bio.volume}}, \code{\link{volume.total}}
 #' @importFrom magrittr %>%
 #' @export
-#' @examples 2
+#' @examples
+#' \dontrun{
+#' #Path to example file from package
+#' img <- system.file("extdata", "foram.tif", package="forImage")
+#'
+#' #measure individual dimension
+#' measure(img)
+#' }
+#'
 
-measure <- function(file, scale = NULL, ref_scale = NULL, pco = FALSE) {
+measure <- function(file, scale = NULL, ref_scale = NULL,
+                    unit = "um", pco = FALSE, save = FALSE, path = NULL) {
 
   ##set python path and initiate modules
 
@@ -46,7 +59,7 @@ measure <- function(file, scale = NULL, ref_scale = NULL, pco = FALSE) {
   }
 
 
-  ## Pixel per metric through meta_file
+  ## Pixel per metric through meta_file - Just for Axiovision for now
 
   if(missing(scale) && missing(ref_scale)){
 
@@ -61,9 +74,19 @@ measure <- function(file, scale = NULL, ref_scale = NULL, pco = FALSE) {
 
   }
 
+  ## Write image result file
+
+  ## Define different path to save the image
+  if(!missing(path)) {
+    if(!endsWith(path, '/'))
+      path <- paste0(path, "/")
+    else {
+      path <- path
+    }
+  }
 
 
-  dim <- cv$measure_object_dimension(file, scale = scale, reference_scale = ref_scale)
+  dim <- cv$measure_object_dimension(file, scale = scale, reference_scale = ref_scale, unit = unit, save = save, path = path)
 
   if(isTRUE(pco)){
     protoplasm <- reticulate::import_from_path("protoplasm", path = python_path)

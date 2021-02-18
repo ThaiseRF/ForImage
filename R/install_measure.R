@@ -23,15 +23,14 @@
 #' ("conda" will be used if virtualenv isn't available). On Windows,
 #' the "conda" method is always used. For more information check the `reticulate` package documentation:
 #' https://rstudio.github.io/reticulate/
-#'
-#' @inheritParams reticulate::conda_list
+#
 #' @export
 
 install_measure <- function(method = "auto", conda = "auto", envname = NULL,
                             extra_packages = NULL, pip = F) {
 
 
-    pack = c(
+    pack <- c(
         #"openssl",
         "numpy",
         "scipy",
@@ -56,7 +55,7 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
     }
 
 
-    package = c(
+    package <- c(
         #"openssl",
         "numpy",
         "scipy",
@@ -67,7 +66,7 @@ install_measure <- function(method = "auto", conda = "auto", envname = NULL,
 
 
 
-    packages = c(package, extra_packages)
+    packages <- c(package, extra_packages)
 
     reticulate::conda_list(conda = conda)
 
