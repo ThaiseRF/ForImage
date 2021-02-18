@@ -26,7 +26,7 @@ paraboloid <- function(h, d_one) {
 # Multiple R-squared:  0.7386,	Adjusted R-squared:  0.7383
 # F-statistic:  2882 on 1 and 1020 DF,  p-value: < 2.2e-16
 
-  hx = (0.50088*h) + 0.83515
+  hx <- (0.50088*h) + 0.83515
   vol1 <- (pi * h * (d_one^2))/8
   vol2  <- (pi * hx * (d_one^2))/8
   vol  <- vol1 - vol2
