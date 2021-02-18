@@ -12,34 +12,48 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
 # forImage
 
 The goal of `forImage` is to facilitate foraminiferal test measurement and biomass estimation.
 
-The package is proposed as an alternative to manual and/or multi-software dependent methods for biometry and biomass estimation. 
+The package is proposed as an alternative to manual and/or multi-software dependent methods for biometry and biomass estimation.
 
 ## Installation
 
-The package **requires** Python >= 3.5. 
+The package **requires** Python \>= 3.5.
 
 You can install `forImage` from github with:
 
 ```{r installation, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("ThaiseRF/forImage")
+remotes::install_github("ThaiseRF/forImage", build_vignettes = TRUE)
+# Using `build_vignettes = TRUE` will slow down the install, but is necessary if 
+# you want to read the vignette, which is recommended
 ```
 
+Use `install_measure()` to install all Python modules dependencies (`scipy`, `imutils`, `numpy`, `pandas`, `Pillow` and `OpenCV`) at once in a virtual environment. This function is a wrapper of [reticulate py_install()](https://rstudio.github.io/reticulate/reference/py_install.html) and requires a conda installation on Windows.
 
-Use `install_measure()` to install all Python modules dependencies at once in a virtual environment. 
-This function is a wrapper of [reticulate py_install()](https://rstudio.github.io/reticulate/reference/py_install.html) and requires a conda installation on Windows. 
+To install the Python modules via pip on Ubuntu:
 
+``` bash
+sudo apt-get install python-pip
+sudo pip install pip --upgrade
+sudo pip install scipy
 
-If an error in [read.dcf(path)](https://github.com/r-lib/devtools/issues/1978#issuecomment-460685615) appears during the installation: 
-
-
-```{r installation2, eval = FALSE}
-devtools::install_github("r-lib/remotes")
-#Restart R
-devtools::install_github("ThaiseRF/forImage")
 ```
 
+On Windows:
+
+``` bash
+python -m pip install --upgrade pip
+pip install scipy
+
+```
+
+On macOs:
+
+``` bash
+python3 -m pip install --upgrade pip
+pip3 install scipy
+
+```
