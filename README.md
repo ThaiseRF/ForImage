@@ -3,6 +3,12 @@
 
 # forImage
 
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/ThaiseRF/forImage/workflows/R-CMD-check/badge.svg)](https://github.com/ThaiseRF/forImage/actions)
+<!-- badges: end -->
+
 The goal of `forImage` is to facilitate foraminiferal test measurement
 and biomass estimation.
 

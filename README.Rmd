@@ -15,6 +15,11 @@ knitr::opts_chunk$set(
 
 # forImage
 
+<!-- badges: start -->
+[![R build status](https://github.com/ThaiseRF/forImage/workflows/R-CMD-check/badge.svg)](https://github.com/ThaiseRF/forImage/actions)
+<!-- badges: end -->
+
+
 The goal of `forImage` is to facilitate foraminiferal test measurement and biomass estimation.
 
 The package is proposed as an alternative to manual and/or multi-software dependent methods for biometry and biomass estimation.
