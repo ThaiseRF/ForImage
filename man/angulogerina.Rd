@@ -19,7 +19,7 @@ A data frame with 100 rows and 6 variables:
 angulogerina
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Angulogerina}.
+A dataframe containing the size and other attributes of species from genus \emph{Angulogerina}.
  The variables are as follows:
 }
 \keyword{datasets}

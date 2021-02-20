@@ -20,7 +20,7 @@ A data frame with 318 rows and 7 variables:
 discorbinella
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Discorbinella}.
+A dataframe containing the size and other attributes of species from genus \emph{Discorbinella}.
  The variables are as follows:
 }
 \keyword{datasets}

@@ -19,7 +19,7 @@ A data frame with 79 rows and 6 variables:
 patellina
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Patellina}.
+A dataframe containing the size and other attributes of species from genus \emph{Patellina}.
  The variables are as follows:
 }
 \keyword{datasets}

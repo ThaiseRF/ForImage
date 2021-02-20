@@ -19,7 +19,7 @@ A data frame with 31 rows and 7 variables:
 loxostomina
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Loxostomina}.
+A dataframe containing the size and other attributes of species from genus \emph{Loxostomina}.
  The variables are as follows:
 }
 \keyword{datasets}

@@ -11,12 +11,12 @@ A data frame with 72 rows and 3 variables:
   \item{mean}{mean protoplasm occupancy percentage \code{(pco)}}
   \item{sd}{standard deviation of mean \code{(pco)}}
   \item{n}{number of specimens}
-  \item{model}{fitted geometric model in Freitas et al. (2019)}
+  \item{model}{fitted geometric model in Freitas and others (2019)}
 }
 }
 \description{
-This dataset contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
-These genera data are originally from Freitas et al. (2019)
+This dataframe contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
+These genera data are originally from Freitas and others (2019)
 }
 \details{
 Foraminifera genera with \code{(pco)} available:
@@ -47,4 +47,4 @@ Foraminifera genera with \code{(pco)} available:
  \tab"wiesnerella"
 }
 }
-\keyword{dataset}
+\keyword{dataframe}

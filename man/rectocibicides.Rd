@@ -18,7 +18,7 @@ A data frame with 199 rows and 4 variables:
 rectocibicides
 }
 \description{
-A dataset containing the size and other attributes of genus \emph{Rectocibicides}.
+A dataframe containing the size and other attributes of genus \emph{Rectocibicides}.
  The variables are as follows:
 }
 \keyword{datasets}

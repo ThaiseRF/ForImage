@@ -20,7 +20,7 @@ A data frame with 208 rows and 7 variables:
 nonionella
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Nonionella}.
+A dataframe containing the size and other attributes of species from genus \emph{Nonionella}.
  The variables are as follows:
 }
 \keyword{datasets}

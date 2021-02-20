@@ -20,7 +20,7 @@ A data frame with 628 rows and 7 variables:
 bolivina
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Bolivina}.
+A dataframe containing the size and other attributes of species from genus \emph{Bolivina}.
  The variables are as follows:
 }
 \keyword{datasets}

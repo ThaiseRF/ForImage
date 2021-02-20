@@ -20,7 +20,7 @@ A data frame with 335 rows and 7 variables:
 asterotrochammina
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Asterotrochammina}.
+A dataframe containing the size and other attributes of species from genus \emph{Asterotrochammina}.
  The variables are as follows:
 }
 \keyword{datasets}

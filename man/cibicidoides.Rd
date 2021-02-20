@@ -20,7 +20,7 @@ A data frame with 118 rows and 7 variables:
 cibicidoides
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Cibicidoides}.
+A dataframe containing the size and other attributes of species from genus \emph{Cibicidoides}.
  The variables are as follows:
 }
 \keyword{datasets}

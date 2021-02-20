@@ -16,14 +16,14 @@ A data frame with 688 rows and 10 variables:
   \item{pco}{percent cell occupancy of the test (13.76--100)}
   \item{length}{test length in um (44.02--609.00)}
   \item{width}{test width in um (83.72--688.32)}
-  \item{model}{adequated geometric model ('10hl'--'17fs')}
+  \item{model}{geometric model ('10hl'--'17fs')}
 }
 }
 \usage{
 quinqueloculina
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
+A dataframe containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
  The variables are as follows:
 }
 \keyword{datasets}

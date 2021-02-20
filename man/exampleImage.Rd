@@ -9,6 +9,6 @@ Image objects with variable dimension and resolution.
 }
 \description{
 Contains image file of one foraminifer.
-These files are originally from previous work - Freitas et al. (2019)
+These files are originally from previous work - Freitas and others (2019)
 }
-\keyword{dataset}
+\keyword{dataframe}

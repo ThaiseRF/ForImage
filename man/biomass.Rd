@@ -9,7 +9,7 @@ biomass(biovolume, method = "michaels")
 \arguments{
 \item{biovolume}{numeric value, object or data.frame with cell living volume values.}
 
-\item{method}{The methods of convertion from biovolume to biomass are listed below, default is \code{'michaels'}:
+\item{method}{The methods of conversion from biovolume to biomass are listed below, default is \code{'michaels'}:
 \itemize{
   \item \code{'saidova'} : adopted cell density of 1.027 g/cm3;
   \item \code{'strathmann'} : measured cell density of 0.110 pgC[org]/um3;

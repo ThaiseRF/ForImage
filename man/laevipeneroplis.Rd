@@ -20,7 +20,7 @@ A data frame with 79 rows and 7 variables:
 laevipeneroplis
 }
 \description{
-A dataset containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
+A dataframe containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
  The variables are as follows:
 }
 \keyword{datasets}
