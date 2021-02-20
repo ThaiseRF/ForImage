@@ -1,4 +1,6 @@
 ^README\.Rmd$
+^README\.Rmd$
+^NEWS\.md$
 ^dev_history\.R$
 ^.*\.Rproj$
 ^\.Rproj\.user$
