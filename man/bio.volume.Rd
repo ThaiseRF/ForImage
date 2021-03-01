@@ -19,6 +19,9 @@ See all genera available in \code{\link{data_pco}}}
 \item{model}{(optional if genus unknown) character informing geometric model to calculate volume.
 See all models available in \code{\link{volume.total}}}
 }
+\value{
+A `data.frame` or numeric object, consisting of calculated individual volume (if not available), biovolume and model (if \code{genus} is informed).
+}
 \description{
 This function calculates Foraminifera biovolume, through geometric approximation.
 To compute others organisms cell volume use \code{\link{volume.total}} function

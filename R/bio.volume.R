@@ -12,6 +12,9 @@
 #' Default value set for specific genus in \code{\link{data_pco}}.
 #' @param model (optional if genus unknown) character informing geometric model to calculate volume.
 #' See all models available in \code{\link{volume.total}}
+#'
+#' @return A `data.frame` or numeric object, consisting of calculated individual volume (if not available), biovolume and model (if \code{genus} is informed).
+#'
 #' @details
 #' The function calculates the biovolume of different individuals from the available genera.
 #'

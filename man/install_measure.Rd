@@ -26,6 +26,9 @@ available on Windows.}
 
 \item{pip}{Install from pip, if possible.}
 }
+\value{
+No return value. The function is only called to install the required packages.
+}
 \description{
 The function is a wrapper to install all python packages dependencies for \code{measure} function at once.
 It will install the following packages:

@@ -17,7 +17,8 @@
 #' @param envname Name of environment to install packages into.
 #' @param extra_packages Additional packages if needed.
 #' @param pip Install from pip, if possible.
-
+#'
+#' @return No return value. The function is only called to install the required packages.
 #'
 #' @details On Linux and OS X the "virtualenv" method will be used by default
 #' ("conda" will be used if virtualenv isn't available). On Windows,
