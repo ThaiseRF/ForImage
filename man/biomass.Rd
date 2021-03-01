@@ -22,7 +22,7 @@ biomass(biovolume, method = "michaels")
 }}
 }
 \value{
-An dataframe or numeric object, consisting of calculated biomass in ugC[org]/ind.
+An `data.frame` or numeric object, consisting of calculated biomass in ugC[org]/ind.
 }
 \description{
 The function estimates biomass through biovolume data and applies different cell density values as conversion methods.

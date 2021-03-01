@@ -5,7 +5,7 @@
 \alias{rectocibicides}
 \title{Rectocibicides size data}
 \format{
-A data frame with 199 rows and 4 variables:
+A `data.frame` with 199 rows and 4 variables:
 \describe{
   \item{ind}{number of individuals}
   \item{h}{test height in um (22.00--101.50)}
@@ -18,7 +18,7 @@ A data frame with 199 rows and 4 variables:
 rectocibicides
 }
 \description{
-A dataframe containing the size and other attributes of genus \emph{Rectocibicides}.
+A `data.frame` containing the size and other attributes of genus \emph{Rectocibicides}.
  The variables are as follows:
 }
 \keyword{datasets}

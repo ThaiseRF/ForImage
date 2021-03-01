@@ -5,7 +5,7 @@
 #' @param x file containing metadata, if xml type: \code{'.xml', '.tif_meta.xml'}
 #' @param ... other arguments.
 #'
-#' @return A dataframe with the following information:
+#' @return A `data.frame` with the following information:
 #' \itemize{
 #'   \item {file} : {filename}
 #'   \item {z_depth} : {measured focus range depth (z)}}

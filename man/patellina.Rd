@@ -5,7 +5,7 @@
 \alias{patellina}
 \title{Patellina size data}
 \format{
-A data frame with 79 rows and 6 variables:
+A `data.frame` with 79 rows and 6 variables:
 \describe{
   \item{ind}{number of individuals by species}
   \item{h}{test height in um (24--66)}
@@ -19,7 +19,7 @@ A data frame with 79 rows and 6 variables:
 patellina
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Patellina}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Patellina}.
  The variables are as follows:
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{cibicidoides}
 \title{Cibicidoides size data}
 \format{
-A data frame with 118 rows and 7 variables:
+A `data.frame` with 118 rows and 7 variables:
 \describe{
   \item{species}{species of genus Cibicidoides from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -20,7 +20,7 @@ A data frame with 118 rows and 7 variables:
 cibicidoides
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Cibicidoides}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Cibicidoides}.
  The variables are as follows:
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{spirillina}
 \title{Spirillina size data}
 \format{
-A data frame with 42 rows and 6 variables:
+A `data.frame` with 42 rows and 6 variables:
 \describe{
   \item{ind}{number of individuals by species}
   \item{h}{test height in um (12--44)}
@@ -19,7 +19,7 @@ A data frame with 42 rows and 6 variables:
 spirillina
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Spirillina}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Spirillina}.
  The variables are as follows:
 }
 \keyword{datasets}

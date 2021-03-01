@@ -21,7 +21,7 @@
 #' The function made available distinct options of conversion factor which are based in several authors.
 #' These factors have been applied to a wide diversity of nano, micro, and macro-organisms, some applied to foraminifera and other nearby groups.
 #'
-#' @return An dataframe or numeric object, consisting of calculated biomass in ugC[org]/ind.
+#' @return An `data.frame` or numeric object, consisting of calculated biomass in ugC[org]/ind.
 #'
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #' @references

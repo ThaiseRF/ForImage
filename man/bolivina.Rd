@@ -5,7 +5,7 @@
 \alias{bolivina}
 \title{Bolivina size data}
 \format{
-A data frame with 628 rows and 7 variables:
+A `data.frame` with 628 rows and 7 variables:
 \describe{
   \item{species}{species of genus Bolivina from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -20,7 +20,7 @@ A data frame with 628 rows and 7 variables:
 bolivina
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Bolivina}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Bolivina}.
  The variables are as follows:
 }
 \keyword{datasets}

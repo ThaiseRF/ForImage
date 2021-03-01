@@ -11,4 +11,4 @@ Image objects with variable dimension and resolution.
 Contains image file of one foraminifer.
 These files are originally from previous work - Freitas and others (2019)
 }
-\keyword{dataframe}
+\keyword{`data.frame`}

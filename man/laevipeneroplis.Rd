@@ -5,7 +5,7 @@
 \alias{laevipeneroplis}
 \title{Laevipeneroplis size data}
 \format{
-A data frame with 79 rows and 7 variables:
+A `data.frame` with 79 rows and 7 variables:
 \describe{
   \item{species}{species of genus Laevipeneroplis from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -20,7 +20,7 @@ A data frame with 79 rows and 7 variables:
 laevipeneroplis
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
  The variables are as follows:
 }
 \keyword{datasets}

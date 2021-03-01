@@ -1,10 +1,10 @@
 #' Foraminiferal genera data for \code{forImage} examples
 #'
-#' This dataframe contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
+#' This `data.frame` contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
 #' These genera data are originally from Freitas and others (2019)
 #' @docType data
-#' @keywords dataframe
-#' @format A data frame with 72 rows and 3 variables:
+#' @keywords `data.frame`
+#' @format A `data.frame` with 72 rows and 3 variables:
 #' \describe{
 #'   \item{genera}{foraminifera genera}
 #'   \item{mean}{mean protoplasm occupancy percentage \code{(pco)}}
@@ -51,7 +51,7 @@ NULL
 #' These files are originally from previous work - Freitas and others (2019)
 #'
 #' @docType data
-#' @keywords dataframe
+#' @keywords `data.frame`
 #' @format Image objects with variable dimension and resolution.
 #'
 #' @name exampleImage
@@ -59,10 +59,10 @@ NULL
 
 #' Ammonia size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Ammonia}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Ammonia}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 867 rows and 7 variables:
+#' @format A `data.frame` with 867 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Ammonia from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -76,10 +76,10 @@ NULL
 
 #' Amphistegina size data
 #'
-#' A dataframe containing the size and other attributes of genus \emph{Amphistegina}.
+#' A `data.frame` containing the size and other attributes of genus \emph{Amphistegina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 167 rows and 5 variables:
+#' @format A `data.frame` with 167 rows and 5 variables:
 #' \describe{
 #'   \item{ind}{number of individuals}
 #'   \item{h}{test height in um (60.0--579.0)}
@@ -91,10 +91,10 @@ NULL
 
 #' Angulogerina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Angulogerina}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Angulogerina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 100 rows and 6 variables:
+#' @format A `data.frame` with 100 rows and 6 variables:
 #' \describe{
 #'   \item{ind}{number of individuals}
 #'   \item{h}{test height in um (81.75--380.91)}
@@ -107,10 +107,10 @@ NULL
 
 #' Asterotrochammina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Asterotrochammina}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Asterotrochammina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 335 rows and 7 variables:
+#' @format A `data.frame` with 335 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Asterotrochammina from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -124,10 +124,10 @@ NULL
 
 #' Bolivina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Bolivina}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Bolivina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 628 rows and 7 variables:
+#' @format A `data.frame` with 628 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Bolivina from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -141,10 +141,10 @@ NULL
 
 #' Cibicidoides size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Cibicidoides}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Cibicidoides}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 118 rows and 7 variables:
+#' @format A `data.frame` with 118 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Cibicidoides from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -158,10 +158,10 @@ NULL
 
 #' Discorbinella size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Discorbinella}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Discorbinella}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 318 rows and 7 variables:
+#' @format A `data.frame` with 318 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Discorbinella from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -175,10 +175,10 @@ NULL
 
 #' Laevipeneroplis size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Laevipeneroplis}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 79 rows and 7 variables:
+#' @format A `data.frame` with 79 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Laevipeneroplis from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -192,10 +192,10 @@ NULL
 
 #' Loxostomina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Loxostomina}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Loxostomina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 31 rows and 7 variables:
+#' @format A `data.frame` with 31 rows and 7 variables:
 #' \describe{
 #'   \item{ind}{number of individuals by species}
 #'   \item{d_one}{test minor diameter in um (101.4--534.6)}
@@ -208,10 +208,10 @@ NULL
 
 #' Nonionella size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Nonionella}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Nonionella}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 208 rows and 7 variables:
+#' @format A `data.frame` with 208 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Nonionella from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -225,10 +225,10 @@ NULL
 
 #' Patellina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Patellina}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Patellina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 79 rows and 6 variables:
+#' @format A `data.frame` with 79 rows and 6 variables:
 #' \describe{
 #'   \item{ind}{number of individuals by species}
 #'   \item{h}{test height in um (24--66)}
@@ -241,10 +241,10 @@ NULL
 
 #' Quinqueloculina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a data frame column.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Quinqueloculina}. As this genus has a wide morphological variation, two types of models can be applied to calculate its volume. Therefore the variables are grouped by model as well as by species. It is also an example that the \code{model} argument can be a `data.frame` column.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 688 rows and 10 variables:
+#' @format A `data.frame` with 688 rows and 10 variables:
 #' \describe{
 #'   \item{species}{species of genus Quinqueloculina from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}
@@ -262,10 +262,10 @@ NULL
 
 #' Rectocibicides size data
 #'
-#' A dataframe containing the size and other attributes of genus \emph{Rectocibicides}.
+#' A `data.frame` containing the size and other attributes of genus \emph{Rectocibicides}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 199 rows and 4 variables:
+#' @format A `data.frame` with 199 rows and 4 variables:
 #' \describe{
 #'   \item{ind}{number of individuals}
 #'   \item{h}{test height in um (22.00--101.50)}
@@ -277,10 +277,10 @@ NULL
 
 #' Spirillina size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Spirillina}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Spirillina}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 42 rows and 6 variables:
+#' @format A `data.frame` with 42 rows and 6 variables:
 #' \describe{
 #'   \item{ind}{number of individuals by species}
 #'   \item{h}{test height in um (12--44)}
@@ -293,10 +293,10 @@ NULL
 
 #' Textularia size data
 #'
-#' A dataframe containing the size and other attributes of species from genus \emph{Textularia}.
+#' A `data.frame` containing the size and other attributes of species from genus \emph{Textularia}.
 #'  The variables are as follows:
 #'
-#' @format A data frame with 84 rows and 7 variables:
+#' @format A `data.frame` with 84 rows and 7 variables:
 #' \describe{
 #'   \item{species}{species of genus Textularia from which raw data were gathered}
 #'   \item{ind}{number of individuals by species}

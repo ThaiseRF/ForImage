@@ -5,7 +5,7 @@
 \alias{ammonia}
 \title{Ammonia size data}
 \format{
-A data frame with 867 rows and 7 variables:
+A `data.frame` with 867 rows and 7 variables:
 \describe{
   \item{species}{species of genus Ammonia from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -20,7 +20,7 @@ A data frame with 867 rows and 7 variables:
 ammonia
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Ammonia}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Ammonia}.
  The variables are as follows:
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{loxostomina}
 \title{Loxostomina size data}
 \format{
-A data frame with 31 rows and 7 variables:
+A `data.frame` with 31 rows and 7 variables:
 \describe{
   \item{ind}{number of individuals by species}
   \item{d_one}{test minor diameter in um (101.4--534.6)}
@@ -19,7 +19,7 @@ A data frame with 31 rows and 7 variables:
 loxostomina
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Loxostomina}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Loxostomina}.
  The variables are as follows:
 }
 \keyword{datasets}

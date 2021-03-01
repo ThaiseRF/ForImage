@@ -74,7 +74,7 @@
 #'
 #' }
 #'
-#' @return A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
+#' @return A `data.frame` or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
 #' @author Thaise R. Freitas \email{thaisericardo.freitas@@gmail.com}
 #' @references
 #' \itemize{

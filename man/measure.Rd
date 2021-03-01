@@ -23,7 +23,7 @@ unit = "um", pco = FALSE, save = FALSE, path = NULL)
 \item{path}{(optional) path to save result file.}
 }
 \value{
-A dataframe containing filename, surface area and major and minor axis. The unit is dependent on the pixel per metric scale. It also returns a PNG file with the measured dimensions if \code{save = TRUE}.
+A `data.frame` containing the file name, surface area and major and minor axis. The unit is dependent on the pixel per metric scale. It also returns a PNG file with the measured dimensions if \code{save = TRUE}.
 }
 \description{
 This function measures dimensions in photomicrographs.

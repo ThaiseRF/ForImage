@@ -32,7 +32,7 @@
 \item{...}{other parameters.}
 }
 \value{
-A dataframe or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
+A `data.frame` or numeric object, consisting of calculated individual volume along with biovolume if the \code{pco} is informed.
 }
 \description{
 The function calculates organisms volume based on geometric approximation.

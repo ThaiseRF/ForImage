@@ -5,7 +5,7 @@
 \alias{amphistegina}
 \title{Amphistegina size data}
 \format{
-A data frame with 167 rows and 5 variables:
+A `data.frame` with 167 rows and 5 variables:
 \describe{
   \item{ind}{number of individuals}
   \item{h}{test height in um (60.0--579.0)}
@@ -18,7 +18,7 @@ A data frame with 167 rows and 5 variables:
 amphistegina
 }
 \description{
-A dataframe containing the size and other attributes of genus \emph{Amphistegina}.
+A `data.frame` containing the size and other attributes of genus \emph{Amphistegina}.
  The variables are as follows:
 }
 \keyword{datasets}

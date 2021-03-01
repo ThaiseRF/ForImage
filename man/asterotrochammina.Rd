@@ -5,7 +5,7 @@
 \alias{asterotrochammina}
 \title{Asterotrochammina size data}
 \format{
-A data frame with 335 rows and 7 variables:
+A `data.frame` with 335 rows and 7 variables:
 \describe{
   \item{species}{species of genus Asterotrochammina from which raw data were gathered}
   \item{ind}{number of individuals by species}
@@ -20,7 +20,7 @@ A data frame with 335 rows and 7 variables:
 asterotrochammina
 }
 \description{
-A dataframe containing the size and other attributes of species from genus \emph{Asterotrochammina}.
+A `data.frame` containing the size and other attributes of species from genus \emph{Asterotrochammina}.
  The variables are as follows:
 }
 \keyword{datasets}

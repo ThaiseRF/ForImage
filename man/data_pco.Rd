@@ -5,7 +5,7 @@
 \alias{data_pco}
 \title{Foraminiferal genera data for \code{forImage} examples}
 \format{
-A data frame with 72 rows and 3 variables:
+A `data.frame` with 72 rows and 3 variables:
 \describe{
   \item{genera}{foraminifera genera}
   \item{mean}{mean protoplasm occupancy percentage \code{(pco)}}
@@ -15,7 +15,7 @@ A data frame with 72 rows and 3 variables:
 }
 }
 \description{
-This dataframe contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
+This `data.frame` contains protoplasm occupancy mean and standard deviation data of 72 foraminifera genera.
 These genera data are originally from Freitas and others (2019)
 }
 \details{
@@ -47,4 +47,4 @@ Foraminifera genera with \code{(pco)} available:
  \tab"wiesnerella"
 }
 }
-\keyword{dataframe}
+\keyword{`data.frame`}
