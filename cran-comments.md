@@ -28,7 +28,12 @@ The tag `\value` was added to bio.volume.Rd and install_measure.Rd.
       From: inst/doc/forImage_vignette.html
       Status: 403
       Message: Forbidden
-      
+  
+  Found the following (possibly) invalid DOIs:
+    DOI: 10.1093/plankt/fbg096
+      From: DESCRIPTION
+      Status: Forbidden
+      Message: 403
 
 > On ubuntu-gcc-release (r-release)
   checking package dependencies ... NOTE
