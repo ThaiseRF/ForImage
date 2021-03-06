@@ -24,7 +24,14 @@ The package is proposed as an alternative to manual and/or multi-software depend
 
 The package **requires** Python \>= 3.5.
 
-You can install `forImage` from github with:
+You can install the release version from CRAN:
+
+```{r cran, eval = FALSE}
+install.packages("forImage")
+
+```
+
+The current development version can be installed from GitHub:
 
 ```{r installation, eval = FALSE}
 remotes::install_github("ThaiseRF/forImage", build_vignettes = TRUE)

@@ -13,7 +13,13 @@ multi-software dependent methods for biometry and biomass estimation.
 
 The package **requires** Python &gt;= 3.5.
 
-You can install `forImage` from github with:
+You can install the release version from CRAN:
+
+``` r
+install.packages("forImage")
+```
+
+The current development version can be installed from GitHub:
 
 ``` r
 remotes::install_github("ThaiseRF/forImage", build_vignettes = TRUE)
